@@ -7,7 +7,6 @@
 
 .grid-item {
   padding: 0px;
-  font-size: 30px;
   text-align: left;
   font-size: 4vw;
   word-break: normal;
@@ -17,4 +16,24 @@
 body {
   font-family: 'Inter', sans-serif;
   font-weight: lighter;
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 6vh 6vh 6vh 6vh;
+  }
+
+  .grid-item {
+    padding: 0px;
+    text-align: left;
+    font-size: 6vw;
+    word-break: normal;
+  }
+
+  body {
+    font-weight: normal;
+  }
 }
