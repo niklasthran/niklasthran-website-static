@@ -1,0 +1,20 @@
+.grid-container {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 61.8vw 38.2vw;
+  grid-template-rows: 61.8vh 38.2vh;
+}
+
+.grid-item {
+  padding: 0px;
+  font-size: 30px;
+  text-align: left;
+  font-size: 4vw;
+  word-break: normal;
+}
+
+@import url('https://rsms.me/inter/inter.css');
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: lighter;
+}
