@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <title>temporary site</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        head, body{
+            font-family: Helvetica, Arial, Verdana, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 9pt;
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        video {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+            
+            image-rendering: auto;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 25vw);
+            grid-auto-rows: auto;
+            gap: 0;
+        }
+
+        .container {
+            width: 25vw;
+            height: 25vw;
+            overflow: hidden;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .grid-container {
+                grid-template-columns: repeat(auto-fit, 50vw);
+            }
+
+            .container {
+                width: 50vw;
+                height: 50vw;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <body>
+            {% block content %}
+            <div class="grid-container">
+
+                <div class="container">
+                    <img src="/static/tmp/count_history_qc_p001sn.png">
+                </div>
+
+                <div class="container">
+                    <img src="/static/tmp/count_plt_qc_p001s.png">
+                </div>
+
+                <div class="container">
+                    <img src="/static/tmp/count_plt_qc_p001sn.png">
+                </div>
+                
+                <div class="container">
+                    <video muted autoplay loop>
+                        <source src="/static/tmp/count_plt_qc_p001sn_100f.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="container">
+                    <img src="/static/tmp/count_plt_qc_p002s.png">
+                </div>
+
+                <div class="container">
+                    <video muted autoplay loop>
+                        <source src="/static/tmp/count_plt_qc_p002s_100f.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="container">
+                    <img src="/static/tmp/qc_blender_m001s.png">
+                </div>
+
+                <div class="container">
+                    <img src="/static/tmp/qc_blender_m001sn.png">
+                </div>
+
+                <div class="container">
+                    <img src="/static/tmp/qc_blender_m002sn.png">
+                </div>
+
+                <div class="container">
+                    <img src="/static/tmp/qc_blender_m003sn.png">
+                </div>
+
+                <div class="container">
+                    <img src="/static/tmp/qc_blender_m004sn.png">
+                </div>
+
+            </div>
+            {% endblock %}
+
+    </body>
+</body>
