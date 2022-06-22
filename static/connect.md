@@ -5,3 +5,5 @@ hello@niklasthran.com<br>
 [GitHub](https://github.com/niklasthran)<br>
 [Soundcloud](https://soundcloud.com/eyepinch)<br>
 [Instagram](https://instagram.com/niklasthran)
+
+The imprint (Impressum) is currently being created. Until then, please refer with questions of all kind to my contacts listed above.
