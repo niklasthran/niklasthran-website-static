@@ -14,6 +14,8 @@ ul {
     padding: 0;
     width: 100%;
     white-space: normal;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 ul::-webkit-scrollbar {
