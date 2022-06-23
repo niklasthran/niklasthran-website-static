@@ -190,7 +190,7 @@ a:link, a:visited, a:hover, a:active {
 
     .col-imgs div {
         height: 100%;
-        /*height: calc(100vh - 10em);*/
+        margin-bottom: 2em;
     }
 }
 
