@@ -152,7 +152,7 @@ a:visited {
 
 @media (min-width: 1700px) {
     .frame {
-        width: calc(100vw - 100em);
+        width: calc(100vw * 0.55);
     }
 }
 
