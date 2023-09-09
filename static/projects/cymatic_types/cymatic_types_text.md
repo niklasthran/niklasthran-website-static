@@ -7,7 +7,7 @@ list: Maßgefertigte Metallplatten und Software, DLP Kurzdistanzbeamer, Leap Bew
 list_translate: Custom metal plates and software, DLP short throw beamer, Leap motion sensor, 80.9 x 28.6 x 28.8 in
 jobs: Konzept und Entwicklung: Robin Woern, Niklas Thran
 jobs_translate: Concept and development: Robin Woern, Niklas Thran
-publishing: Skopec, David. Infoklasse. Berlin: Verlag der Universität der Künste, 2022. ISBN 978-3-89462-371-5
+publishing: David Skopec (2022). Infoklasse. Berlin: Verlag der Universität der Künste. ISBN 978-3-89462-371-5.
 -->
 <div><p>Cymatic Types ist eine interaktive audiovisuelle Installation, die auf Experimenten von Ernst Chladni basiert. Sie verfolgt das Konzept einer Bildersprache, welche Visualisierungen von stehenden Schwingungswellen als bestimmte Zeichen interpretiert. Die entstandenen Zeichen können interaktiv aufgerufen und dabei in ihrer Reformierung beobachtet werden.<br><br>
 Der Begriff Kymatik beschreibt die Visualisierung von Klängen und Wellen. Genauer ist damit das Phänomen der Musterbildung gemeint, die in fluiden oder körnigen Materialien im Zusammenspiel mit oszillierenden Oberflächen bei resonierenden Frequenzen auftreten.<br>
