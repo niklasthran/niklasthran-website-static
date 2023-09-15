@@ -5,8 +5,8 @@ date: 02-2020
 links: https://robinwoern.com/cymatic-types
 list: Maßgefertigte Metallplatten und Software, DLP Kurzdistanzbeamer, Leap Bewegungssensor, 180 x 70 x 73 cm
 list_translate: Custom metal plates and software, DLP short throw beamer, Leap motion sensor, 80.9 x 28.6 x 28.8 in
-jobs: Konzept und Entwicklung: Robin Woern, Niklas Thran
-jobs_translate: Concept and development: Robin Woern, Niklas Thran
+jobs: Konzept und Entwicklung: Robin Woern, Niklas Thran; Videografie: Vanessa Amoah Opoku
+jobs_translate: Concept and development: Robin Woern, Niklas Thran; Videography: Vanessa Amoah Opoku
 publishing: David Skopec (2022). Infoklasse. Berlin: Verlag der Universität der Künste. ISBN 978-3-89462-371-5.
 -->
 <div><p>Cymatic Types ist eine interaktive audiovisuelle Installation, die auf Experimenten von Ernst Chladni basiert. Sie verfolgt das Konzept einer Bildersprache, welche Visualisierungen von stehenden Schwingungswellen als bestimmte Zeichen interpretiert. Die entstandenen Zeichen können interaktiv aufgerufen und dabei in ihrer Reformierung beobachtet werden.<br><br>
