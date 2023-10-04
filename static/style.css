@@ -34,6 +34,7 @@ a:focus,
 a:hover,
 a:visited {
     color: var(--font-col);
+    overflow-wrap: break-word;
 }
 
 .frame {
