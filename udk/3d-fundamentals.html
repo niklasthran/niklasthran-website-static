@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        .threejs-comp {
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-    </style>
     <head>
+        <title>Fundamentals of 3D</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fundamentals of 3D</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .three-comp {
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+        </style>
     </head>
     <body>
-        <!-- Name of canvas class defined in JS script -->
-        <canvas class="threejs-comp"></canvas>
-        <!-- Path to three.js library -->
-        <script src="three.min.js"></script>
-        <!-- Place path to JS script here -->
-        <script src="threejs-comp.js"></script>
+        <script type="importmap">
+			{
+				"imports": {
+					"three": "./three/build/three.module.js",
+					"three/addons/": "./jsm/"
+				}
+			}
+		</script>
+
+        <canvas class="three-comp"></canvas>
+        <script type="module" src="./three-comp.js"></script>
     </body>
 </html>
