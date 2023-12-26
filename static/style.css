@@ -68,27 +68,9 @@ a:visited {
     text-align: left;
 }
 
-.markdown-body div {
-    width: 100%;
-    min-height: calc(8 * 1.2em);
-    display: block;
-}
-
-.markdown-body p {
-    padding: 0;
-    margin: 0;
+.col li {
+    list-style: none;
     break-inside: avoid-column;
-}
-
-.markdown-body code {
-    font-family: IBM Plex Mono;
-}
-
-.markdown-body img,
-.markdown-body video {
-    margin: 1.2em 0 1.2em 0;
-    width: 100%;
-    height: auto;
 }
 
 .gallery img,
@@ -151,6 +133,27 @@ a:visited {
     border-bottom: 1px solid var(--font-col);
 }
 
+.read-more-button {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.read-more-target,
+.read-more-trigger_opened {
+    display: none;
+}
+.read-more-state:checked ~ .read-more-wrap .read-more-target,
+.read-more-state:checked ~ .read-more-trigger_opened {
+    display: block;
+}
+.read-more-state:checked ~ .read-more-trigger_closed {
+    display: none;
+}
+
+.visible-switch {
+    display: none;
+}
+
 @media (max-width: 1250px) {
     .frame {
         width: calc(100vw - 10em);
@@ -170,10 +173,6 @@ a:visited {
         text-align: right;
     }
 
-    .markdown-body p {
-       margin: 0 0 1.2em 0;
-    }
-
     .name li {
         white-space: normal;
     }
@@ -184,6 +183,10 @@ a:visited {
 
     .list {
         width: 100%;
+    }
+
+    .visible-switch {
+        display: block;
     }
 }
 
