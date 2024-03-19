@@ -1,0 +1,350 @@
+{
+  "rn_generator": {
+    "title": {
+      "de": "ZZ-Generator mit serieller Schnittstelle",
+      "en": "RN-Generator with Serial Interface"
+    },
+    "date": "2020-06",
+    "description": {
+      "abstract": {
+        "de": "Ein experimentelles Gerät, das sich mit der Erzeugung von Zufallszahlen (ZZ) auf der Grundlage von Umwelteinflüssen für die Nutzung in der visuellen Gestaltung und Bilderzeugung befasst.",
+        "en": "An experimental device that deals with the generation of random numbers (RN) based on environmental influences for use in visual design and image generation."
+      }
+    },
+    "metadata": {
+      "de": "Maßgefertigte Elektronik, Software und Gehäuse, Arduino, 14,0 x 6,2 x 14,0 cm",
+      "en": "Custom electonics, software and case, Arduino, 5.5 x 2.4 x 5.5 in"
+    }
+  },
+
+  "leiterplattenfelder": {
+    "title": {
+      "de": "Leiterplattenfelder",
+      "en": ""
+    },
+    "date": "2018-05",
+    "description": {
+      "abstract": {
+        "de": "Strukturbezogene Kompositionsstudien von Leiterplatten.",
+        "en": "Structure-related compositional studies of printed circuit boards."
+      }
+    },
+    "metadata": {
+      "de": "Acryl auf Papier, 29,7 x 42,0 und 29,7 x 29,7 cm",
+      "en": "Acryl on paper, 11.7 x 16.5 and 11.7 x 11.7 in"
+    }
+  },
+
+  "cymatic_types": {
+    "title": {
+      "de": "",
+      "en": "Cymatic Types"
+    },
+    "date": "2020-02",
+    "description": {
+      "abstract": {
+        "de": "Cymatic Types ist eine interaktive audiovisuelle Installation, die auf Experimenten von Ernst Chladni basiert. Sie verfolgt das Konzept einer Bildersprache, welche Visualisierungen von stehenden Schwingungswellen als bestimmte Zeichen interpretiert. Die entstandenen Zeichen können interaktiv aufgerufen und dabei in ihrer Reformierung beobachtet werden.",
+        "en": "Cymatic Types is an interactive audiovisual installation, based on experiments by Ernst Chladni. Following the concept of a visual language, it interprets images of standing waves as specific signs. The emerged types can be accessed and observed during their reforming."
+      },
+      "text": {
+        "de": "Der Begriff Kymatik beschreibt die Visualisierung von Klängen und Wellen. Genauer ist damit das Phänomen der Musterbildung gemeint, die in fluiden oder körnigen Materialien im Zusammenspiel mit oszillierenden Oberflächen bei resonierenden Frequenzen auftreten.<br> Die Gestaltung der Interaktion ist eine Hommage an das Theremin. Diese funktioniert über eine einfache Gestensteuerung ohne physischen Kontakt, die von einem Infrarot Sensor erkannt wird.<br> Die Skala des Interface zeigt vordefinierte Frequenzen, denen ausgewählte Muster zugeordnet sind. Der Kreis symbolisiert eine erforderliche Interaktion. Reduziert auf das Wesentliche ist Cymatic Types visuell und auditiv erfahrbar.",
+        "en": "The term Cymatics stands for the visualization of sounds and waves. It specifically describes the phenomena of pattern occurrences in a fluid or granular material at a frequency that resonates with a connecting oscillating surface.<br> The interaction design is a homage to the theremin. It works with no physical contact but simple gesture recognition via an infrared-based tracking sensor. The interface’s scale represents predefined frequencies that assign certain patterns. The circle symbolizes required interaction. Scaled-down to a minimalistic setting, Cymatic Types can be experienced visually and auditory."
+      }
+    },
+    "metadata": {
+      "de": "Maßgefertigte Metallplatten und Software, DLP Kurzdistanzbeamer, Leap Bewegungssensor, 180 x 70 x 73 cm",
+      "en": "Custom metal plates and software, DLP short throw beamer, Leap motion sensor, 80.9 x 28.6 x 28.8 in"
+    },
+    "credits": {
+      "Robin Woern, Niklas Thran": {
+        "de": "Konzept und Entwicklung",
+        "en": "Concept and development"
+      },
+      "Vanessa Amoah Opoku": {
+        "de": "Videografie",
+        "en": "Videography"
+      }
+    },
+    "links": ["https://robinwoern.com/cymatic-types"],
+    "publishings": ["David Skopec (2022). Infoklasse. Berlin: Verlag der Universität der Künste. ISBN 978-3-89462-371-5."]
+  },
+
+  "brutalism_study": {
+    "title": {
+      "de": "Architekturstudie zum Brutalismus",
+      "en": "Architecture Study on Brutalism"
+    },
+    "date": "2019-03",
+    "description": {
+      "abstract": {
+        "de": "Diese Studie erkundet den brustalisischen Architekturstil und legt dabei den Fokus auf das charakteristische Aussehen des Materials und der Formen. Die experimentellen Bilder zeigen kaum realistische Skulpturen, die aus verschiedenen, nicht zu einander gehöhrenden Gebäudeteilen zusammengesetzt sind. Die neu entstandenen Strukturen zeigen eine sichtbare Uniformität und markante Geometrien auf, die die Aura dieses Baustils verkörpern.",
+        "en": "This study explores Brutalism by putting a focus on the appearance of the material and shapes that are significant to the architectural style. The images show experiments that reassemble parts taken from unrelated buildings and transform them into barely possible sculptures. The newly emerged structures exhibit a visible uniformity and bold geometrics that embody the aura of this genre."
+      }
+    },
+    "metadata": {
+      "de": "Digitale Kompositionen",
+      "en": "Digital compositions"
+    }
+  },
+
+  "type_not_for_typing": {
+    "title": {
+      "de": "",
+      "en": "Typeface not for Typing"
+    },
+    "date": "2022-01",
+    "description": {
+      "abstract": {
+        "de": "Diese Sammlung basiert auf einer Schrift, die nicht zur herkömmlichen Setzung gedacht ist. Es erforscht die zugrunde liegenden Geometrien der Schrift durch verschiedene visuelle Ausdrucksformen.",
+        "en": "This collection is based on a typeface that is not supposed to be for typing. It further explores the typeface’s underlying geometries through various visual expressions."
+      }
+    },
+    "metadata": {
+      "de": "Digitale Kompositionen",
+      "en": "Digital compositions"
+    }
+  },
+
+  "video_glitch_tool": {
+    "title": {
+      "de": "",
+      "en": "Video Glitch Tool"
+    },
+    "date": "2022-01",
+    "description": {
+      "abstract": {
+        "de": "Ein experimentelles Tool zur Erzeugung von Videostörungen, mit der Idee, Videodaten als Material zu benutzen, das gemischt, transformiert und durcheinander gewürfelt werden kann, als wäre es physische Materie. Hervorgegangen aus Experimenten im Kontext des (Un)Coding Video Seminars von Fabiola Hannah an The New School.",
+        "en": "An experimental tool to produce video glitches that pursues the idea of using video data as a material that can be mixed, transformed and scrambled around like it was physical matter. Originated from experiments in the context of Fabiola Hannah’s (Un)Coding Video class at The New School."
+      }
+    },
+    "metadata": {
+      "de": "Maßgefertigte Software",
+      "en": "Custom software"
+    },
+    "links": ["https://github.com/niklasthran/Video-Glitch-Tool", "http://fabiolahanna.com"]
+  },
+
+  "tabula_rasa": {
+    "title": {
+      "de": "Tabula Rasa",
+      "en": ""
+    },
+    "date": "2021-04",
+    "description": {
+      "abstract": {
+        "de": "Tabula Rasa ist eine datenbasierte Videoinstallation. Inspiriert vom philosophischen Konzept der unbeschriebenen Tafel untersucht sie die Machine Learning Technologie des Deep Reinforcement Learning. Simuliert in einer fluiden Umgebung wird das Training eines Agents visuell in einer abstrakt-organischen Ästhetik interpretiert. Alle Bewegungsdaten wurden im Unüberwachten Lernprozess des Agents, dessen einziges Ziel in der Vorwärtsbewegung liegt, generiert.",
+        "en": "Tabula Rasa is a movement data-driven video installation. Inspired by the philosophical concept of the clean slate, it explores the technology of Deep Reinforcement Learning in machine learning. An agent’s training is visually interpreted through organic aesthetics as it is simulated in a fluid environment. As the agent’s single goal is to move forward, all motion data has been generated in its unsupervised learning process."
+      },
+      "text": {
+        "de": "In Anlehnung an die Theorie von Tabula rasa lernt der Agent durch die konstante Interaktion mit seiner Umwelt. Dieser agiert wie auf einem leeren Blatt Papier—ohne jegliche Erfahrung. Die einzige Motivation, sich weiterzuentwickeln und zu lernen, besteht darin, die höchstmögliche Belohnung zu erhalten.<br> Um diesen Lernfortschritt zu visualisieren, spiegelt das Aussehen des Agents den jeweiligen Stand des Trainings wider. Die Belohnungen und die Performance der Strategie bestimmen Farbe und Erscheinung der Geometrie. Der sichtbare Fortschritt und der Zeitverbleib bis zum Trainingsabschluss werden eindeutig dargestellt. Um Abweichungen in Unüberwachten Lernprozessen zu zeigen, werden mehrere Agents parallel erzeugt. Diese interagieren jedoch nicht miteinander.<br> Jede Ebene der begleitenden Musik ist eine Metonymie und Metapher für Ereignisse des Lebens. Es überlagert, verliert und verdichtet sich, zittert und wechselt zwischen einfach und kompliziert. Dieser Prozess ist unumkehrbar: Während der Agent lernt, sich vorwärts zu bewegen, bewegen sich Zeit und Klang ebenfalls vorwärts.",
+        "en": "According to the theory of Tabula rasa, the agent learns by constantly interacting with the environment. Like on a blank sheet of paper, it starts acting without any experience. The only motivation to progress and learn is to be rewarded as high as possible.<br> To visualize this learning progress, the agent’s appearance corresponds to the training’s state at a time. The rewards and the strategy performance determine the colors and the shape. The visible progress and the interval until the training’s completion are visualized distinctively. To demonstrate differences in unsupervised learning processes, multiple agents, spawn parallel, not interacting with each other.<br> Each layer of the accompanying music is metonymy and a metaphor for life events. It overlaps, shakes, disappears, accumulates, shifts between simple and complicated. This process is irreversible: As the agent learns to move forward, time and sound move forward."
+      }
+    },
+    "metadata": {
+      "de": "Maßgefertiges Gehäuse, 4K UHD Bildschirm, einkanaliges Video, 167 x 99 x 35 cm",
+      "en": "Custom case, 4K UHD display, 1-channel video, 65.7 x 39.0 x 13.8 in"
+    },
+    "credits": {
+      "Adrian Pfisterer, Robin Woern, Niklas Thran": {
+        "de": "Konzept und Entwicklung",
+        "en": "Concept and development"
+      },
+      "이지헌 Zihern Lee": {
+        "de": "Musik",
+        "en": "Score"
+      }
+    },
+    "links": ["https://robinwoern.com/tabula-rasa", "https://linktr.ee/zihern", "https://github.com/adripfi"]
+  },
+
+  "algo_rep_and_iter": {
+    "title": {
+      "de": "Etüde zur algorithmischen Wiederholung und Iteration",
+      "en": "Etude on Algortihmic Repetition and Iteration"
+    },
+    "date": "2021-07",
+    "description": {
+      "abstract": {
+        "de": "Zwei algorithmische Kompositionen, die sich grundlegend mit Wiederholung und Iteration befassen. Sie können verändert und skaliert werden.",
+        "en": "Two algorithmic compositions, fundamentally exploring repetition and iteration, both able to be changed and scaled."
+      }
+    },
+    "metadata": {
+      "de": "Maßgefertigte Software",
+      "en": "Custom software"
+    },
+    "links": ["https://ago-band.info/music/", "https://ago-band.bandcamp.com"],
+    "publishings": ["Henrike Uthe, Hilka Dirks, Tessa Meyer (2019). Basics Blog Post. Berlin: Verlag der Universität der Künste. ISBN 978-3-89462-321-0.", "Ago (2021). Chroma (Artwork). Stuttgart."]
+  },
+
+  "geometry_perspective": {
+    "title": {
+      "de": "Geometrie- und Perspektivenstudien",
+      "en": "Geometric and Perspectival Studies"
+    },
+    "date": "2015-03",
+    "description": {
+      "abstract": {
+        "de": "Die zwei Zeichnungen experimentieren mit grundlegender Geometrie und Perspektive, unter Anderem inspiriert an statikrelevanten Bauelementen.",
+        "en": "The two drawings experiment with basic geometry and perspective, taking inspiration from structural construction elements."
+      }
+    },
+    "metadata": {
+      "de": "Zeichnung auf Papier, beide 29,7 x 42,0 cm",
+      "en": "Drawing on paper, both 11.7 x 16.5 in"
+    }
+  },
+
+  "pi": {
+    "title": {
+      "de": "Pi",
+      "en": ""
+    },
+    "date": "2022-07",
+    "description": {
+      "abstract": {
+        "de": "Pi ist eine kinetische Skulptur, die auf dem Rauschen von zufällig verteilten Ziffern der gleichnamigen Zahl basiert. Dieses Rauschen ist eine annehmbar unerschöpfliche Quelle, der Elemente nicht periodischer Natur entspringen. Sie versetzen die Körper in Bewegung, deren Körperformen wiederum die Quelle kommunizieren.",
+        "en": "Pi is a kinetic sculpture based on the noise of randomly distributed digits of the eponymous number. The noise appears as a seemingly inexhaustible well of non-periodic elements, setting the objects in motion. In turn, the object’s shapes communicate the source."
+      },
+      "text": {
+        "de": "Zählt die Kreiszahl Pi zur Gruppe der normalen Zahlen? Eine Frage, die sich bis heute nicht endgültig beweisen lässt. Allerdings legen neuere Algorithmen diese Vermutung nahe: Alle Nachkommaziffern von Pi als auch ihre Ziffernblöcke einer bestimmten Länge treten (asymptotisch) gleich häufig auf. Diese Eigenschaft macht die Zahl zu einer Quelle zufällig verteilter Ziffern, die alle gleich häufig vorkommen.<br> Jedes der zehn Installationselemente repräsentiert eine Nachkommaziffer von Null bis Neun. Durch die scheinbar unendliche Anzahl an Ziffern wird die Drehbewegung der Elemente ausgelöst. Die Abfolge ist vorherbestimmt—jedoch ohne wiederkehrendes Muster.",
+        "en": "Does Pi belong to the numeric range of normal numbers? Yet, not entirely proven, new algorithms suggest just that. All its decimal places and number blocks of a certain length appear (asymptotic) equally frequently. This property makes Pi a source of randomly distributed digits that occur equally often.<br> Every of the ten installation objects represents a decimal place’s integer, zero to nine. The seemingly infinite quantity of digits triggers the rotating movements of the objects with a predestined sequence but without any repeating patterns."
+      }
+    },
+    "metadata": {
+      "de": "MDF-Platten, Stahlrohe, Buchenholzringe, maßgefertigte Servomotoren und Software, Arduino, 450 x 45 x 175 cm",
+      "en": "MDF boards, steel tubes, beechwood loops, custom servo motors and software, Arduino, 68.9 x 117.2 x 17.7 in"
+    },
+    "credits": {
+      "Robin Woern": {
+        "de": "Konzept",
+        "en": "Concept"
+      },
+      "Niklas Thran": {
+        "de": "Entwicklung",
+        "en": "Development"
+      }
+    },
+    "links": ["https://robinwoern.com/pi"]
+  },
+
+  "tunnel": {
+    "title": {
+      "de": "Tunnel",
+      "en": ""
+    },
+    "date": "2019-07",
+    "description": {
+      "abstract": {
+        "de": "Diese Komposition befasst sich mit Projection Mapping mittels eines visuell-auditiven Ansatzes. In einem Raum (einem Tunnel) versucht sie, anhand hell scheinender Konturen, Partikeln und binauralem Ton die Wahrnehmung des Betrachters zu überlisten.",
+        "en": "This composition explores projection mapping through a visual and auditory approach. It aims to trick the viewers perception of a space (a tunnel) by using nothing but bright-lit contours, particles, and binaural sound."
+      }
+    },
+    "metadata": {
+      "de": "Einkanaliges Video, 30 Sek.",
+      "en": "1-channel video, 30\""
+    },
+    "links": ["http://splitlevel-udk.de"],
+    "publishings": ["Anna Anders, Gabi Schillig, Ruven Wiegert (2020). Splitlevel – Kunstraum Potsdamer Straße. Berlin: Verlag der Universität der Künste. ISBN 978-3-89462-346-3."]
+  },
+
+  "lockdown_diaries": {
+    "title": {
+      "de": "Artwork für Lockdown Diaries",
+      "en": "Artwork for Lockdown Diaries"
+    },
+    "date": "2023-04",
+    "description": {
+      "abstract": {
+        "de": "Federico Sauter produzierte sein Debüt \"Lockdown Diaries: Ambient Works for Subharmonicon\" 2021 zu Hause in einem dieser trüben COVID-19-Pandemie-Winter. Während sein Werk eine Kapitulation vor Lockdown-Beschränkungen und ein Gefühl der Ausweglosigkeit widerspiegelt, ist es auch ein meditativer Blick nach Innen und bietet eine Perspektive in die Intimität des eigenen Zuhauses.",
+        "en": "Federico Sauter produced his debut record \"Lockdown Diaries: Ambient Works for Subharmonicon\" sometime during one of those gloomy COVID-19 pandemic-winter in 2021 at home. While his record reflects surrender to lockdown restrictions and a feeling of hopelessness, it is also a meditative perspective inwards and serves a glimpse on domestic intimacy."
+      },
+      "text": {
+        "de": "Sauter macht den Subharmonicon (Moog, 2020), einen analogen Synthesizer, zum Hauptmedium des Werks. Dieser steht auch im Mittelpunkt des Cover-Artworks. Das Bild zeigt einen Einblick, der auf die starke Fokussiertheit im Arbeiten Sauters hindeutet, aber auch auf eine gewisse Einsamkeit, die außerhalb des Lichtkegels lauert — alles im Umfeld der Wohnung. \"Lockdown Diaries: Ambient Works for Subharmonicon\" wurde auf Petite Victory Collective veröffentlicht.",
+        "en": "Sauter made the Subharmonicon (Moog, 2020), an analog synthesizer, the central medium of his record as it is the center point of the cover artwork. The image depicts an insight that suggests a deep focus in Sauter's practice but also a certain loneliness lurking outside the light cone, all within the surroundings of the apartment. \"Lockdown Diaries: Ambient Works for Subharmonicon\" is released through Petite Victory Collective."
+      }
+    },
+    "metadata": {
+      "de": "Digitale 2-Farben Illustration (Druck kompatibel), spezielles Dithering",
+      "en": "Digital 2-color illustration (print-compatible), custom dithering"
+    },
+    "links": ["https://federicosauter.bandcamp.com/album/lockdown-diaries-ambient-works-for-subharmonicon", "https://www.petitevictorycollective.com/artists/federico-sauter"],
+    "publishings": ["Federico Sauter (2023). Lockdown Diaries: Ambient Works for Subharmonicon. København: Petite Victory Collective."]
+  },
+
+  "circular": {
+    "title": {
+      "de": "",
+      "en": "Circular"
+    },
+    "date": "2023-12",
+    "description": {
+      "abstract": {
+        "de": "Circular ist eine ortsspezifische Installation für das Fraunhofer-Institut für Grenzflächen- und Bioverfahrenstechnik IGB. Sie verkörpert die Vielfalt der Bioökonomie—eine nachhaltige und zirkuläre Wirtschaftsform. Die Arbeit visualisiert unterschiedliche Perspektiven der Forschung. Circular befindet sich als zentrales Element im Atrium des Instituts in Stuttgart.",
+        "en": "Circular is a site-specific installation at the Fraunhofer Institute for Interfacial Engineering and Biotechnology IGB. It embodies a diverse and biobased economy (bioeconomy)—a system that strives for sustainability and circularity—by displaying different facets of scientific research in this field. As a central element, Circular is located in the institute's atrium in Stuttgart."
+      },
+      "text": {
+        "de": "Das IGB forscht an biobasierten Materialien aus nachwachsenden Rohstoffen, die sich durch eine hohe Wiederverwertbarkeit auszeichnen und damit effiziente und vielseitige Einsatzmöglichkeiten erlauben. Im Rahmen des Projekts Look@BioEconomy ermöglichte die Kooperation mit dem Fraunhofer-Institut einen direkten Austausch zwischen Kunst und Wissenschaft.<br> 16 Trägerplatten enthalten unterschiedliche Materialien, die derzeit am IGB erforscht werden. Die hängenden Objekte eröffnen einen konkreten visuellen Einblick in den aktuellen Stand der Forschung. Vertikal eingespannt und miteinander verbunden sind die Exponate mithilfe von Drahtseilen, sodass sie sich auch als kontinuierliche Bahnen weiterdenken lassen. Die Installation verweist damit auf die dynamische Entwicklung und Offenheit der Bioökonomie. Circular gibt diesem laufenden Prozess und der Arbeit der Wissenschaftler*innen am Institut eine Gestalt.<br> Die Konstruktion bildet eine ästhetische Referenz zum Institutsgebäude selbst, den Laboren und deren technischer Ausstattung. Hell reflektierendes Metall und transparentes Glas lassen die Installation leicht wirken. Die freistehende Position von Circular eröffnet verschiedene räumliche Perspektiven. Als integraler Bestandteil des Treppenhauses fungiert die Installation als Impuls für offene Wissenschaftskommunikation.<br> Besonderer Dank gilt den Wissenschaftler*innen und Mitarbeiter*innen des Fraunhofer IGB, Lisa Kern, Sabine Krieg, Elke Präg, Benham Parwizi und Maik Schalge. Die Arbeit wurde von Sophie Hundbiss, Stefan Hundbiss, David Krebs, Carsten Nicolai, Alexander Nitzke, Adrian Pfisterer, Luisa Roth und Ralf T., unterstützt.<br> Das Kunstprojekt »Look@BioEconomy« wurde vom Fraunhofer-Netzwerk »Wissenschaft, Kunst und Design« gefördert.",
+        "en": "IGB researches bio-based materials made from renewable materials rather than fossile fuels, which are characterized by a high recyclability and thus allow efficient and versatile applications.<br> As part of the project Look@BioEconomy, this cooperation with the Fraunhofer Institute enabled a head-on exchange of art and science.<br> 16 panes carry different materials that are currently being researched at the IGB. These hanging objects provide a tangible optical insight into the current state of research. They are mounted vertically,interconnected by wires, allowing them to be thought of as continuous paths. The installation thus refers to the dynamic and everdeveloping nature of the bioeconomy. Circular gives shape to this ongoing process and the work of scientists at the institute.<br> The construction aesthetically references the institute building itself, its laboratories and technical equipment. Brightly reflective metal and transparent glass make the installation appear effortless while Circular's detached position offers various spatial perspectives. As an intrinsic part of the stairwell, the installation sends impulses for open science communication.<br> Special recognition goes to the scientists and employees of Fraunhofer IGB, Lisa Kern, Sabine Krieg, Elke Präg, Benham Parwizi and Maik Schalge. The project was supported by Sophie Hundbiss, Stefan Hundbiss, David Krebs, Carsten Nicolai, Alexander Nitzke, Adrian Pfisterer, Luisa Roth and Ralf T.<br> The art project \"Look@BioEconomy\" was sponsored by the Fraunhofer network \"Science, Art and Design\"."
+      }
+    },
+    "metadata": {
+      "de": "Aluminiumprofile und -platten, Drahtseil, biobasierte Materialien zwischen ESG-Platten, 108 x 108 x 500 cm",
+      "en": "Aluminum profiles and sheets, wire cable, bio-based materials set in tempered glass sheets, 42.5 x 42.5 x 196.6 in"
+    },
+    "credits": {
+      "Fraunhofer IGB": {
+        "de": "Auftraggeber",
+        "en": "Client"
+      },
+      "Robin Woern, Niklas Thran": {
+        "de": "Konzept, Entwicklung, Gestaltung und Montage",
+        "en": "Concept, development, design and assembly"
+      },
+      "Ute Schimmelpfennig": {
+        "de": "Architektonische Beratung",
+        "en": "Architectural consultation"
+      },
+      "Technik & Design M. Maile": {
+        "de": "Statik", 
+        "en": "Statics"
+      },
+      "ro.handmade design": {
+        "de": "Montageunterstützung",
+        "en": "Installation support"
+      },
+      "Liboh Metallwerkstatt GmbH, BE GLASS GmbH, item Industrietechnik GmbH": {
+        "de": "Fertigung",
+        "en": "Manufacturing"
+      },
+      "© Robin Woern and Niklas Thran / Fraunhofer IGB": {
+        "de": "Fotografien",
+        "en": "Photography"
+      }
+    },
+    "links": ["https://robinwoern.com/circular", "https://www.igb.fraunhofer.de/de/look-at-bioeconomy.html"]
+  },
+
+  "the_dorsal_map": {
+    "title": {
+      "de": "",
+      "en": "A Response: The Dorsal Map"
+    },
+    "date": "2024-03",
+    "description": {
+      "abstract": {
+        "de": "The Dorsal Map: Mit \"Technologie\" in Richtung Zukunft navigieren — was bedeutet das überhaupt? Ausgehend von einer Antwort auf Dr. Annika Haas' Seminar, \"Whose Technology?\" (2023-24), und \"Dorsality\" von David Wills (2008), versucht diese Karte Teile seiner Begriffsinterpretation der \"Technologie\" darzustellen und nachzuvollziehen.",
+        "en": "The Dorsal Map: Navigating towards future goals through 'technology', and what even does that mean? Exploring further, from an initial response to Dr. Annika Haas' seminar, 'Whose Technology?' (2023-24), and 'Dorsality' by David Wills (2008), this is a map to present and comprehend parts of his interpretation of the term 'technology'."
+      },
+      "text": {
+        "de": "Sie zeigt Beziehungen und Ausrichtungen zwischen besonders hervortretenden Wörtern des Textes und soll ihre Bedeutung dadurch sichtbar machen. Das Diagramm geht letztendlich über das Individuum hinaus und visualisiert die Anwendung von Wills' Interpretation auf zwischenmenschlicher Ebene: Ablagerungen in der Gegenwart, die, in die Vergangenheit übergehend, zu Erinnerungen und schließlich zu Archiven werden, kreisen in der Gegenwart anderer Zweibeiner und beschleunigen deren zielgerichtete Vorwärtsbewegung. So verbindet sich die eigene Gegenwart mit der Vergangenheit anderer, und anderer Gegenwart mit der eigenen Vergangenheit. Die Visualisierung soll diese miteinander verwobenen Einflüsse zeigen.",
+        "en": "It shows relations and alignments amongst imposing words of the text, so their meaning may become visible. Starting from this, the diagram even exceeds the layer of the individual and visualises the application of Wills' interpretation interpersonally: Deposits at the present that, crossing over in the past, become memories and, finally archives, will revolve in the present of other given biped, accelerating their forward movements towards their future goals. So ones present connects to others' past, and others' present ones past. The visual shall show this interwoven influences."
+      }
+    },
+    "metadata": {
+      "de": "Schwarz-Weiß Laserdruck auf C4 Briefumschlag, 19,7 x 19,8 cm",
+      "en": "Black and white laser print on C4 envelope, 7.8 x 7.8 in"
+    },
+    "links": ["https://www.transcript-verlag.de/author/haas-annika-320008938/"]
+  }
+}
