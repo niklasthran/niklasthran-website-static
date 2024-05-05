@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Niklas Thran - Catalog</title>
+</head>
+
+<body>
+    <div class="frame">
+    {% extends "base.html" %}
+
+        {% block content %}
+        <div class="line">
+            <ul class="col">
+                {% for key in json_data %}
+                <li class="row">
+                    <div class="name">
+                        <ul>
+                            {% if json_data[key]["title"]["de"] == "" or json_data[key]["title"]["en"] == "" %}
+                            <li>
+                                <a href="{{ url_for('new_project', key=key) }}">
+                                    {{ json_data[key]["title"]["de"] }}{{ json_data[key]["title"]["en"] }}
+                                </a>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a href="{{ url_for('new_project', key=key) }}">
+                                    {{ json_data[key]["title"]["de"] }}
+                                </a>
+                            </li>
+                            <li>
+                                <a class="translate" href="{{ url_for('new_project', key=key) }}">
+                                    {{ json_data[key]["title"]["en"] }}
+                                </a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+
+                    <div class="date">{{ json_data[key]["date"] }}</div>
+
+                    <div class="thumbgallery">
+                        <a href="{{ url_for('new_project', key=key) }}">
+                            
+                            <!-- value = n of elements in thumbgallery-->
+                            {% set count = namespace(value=0) %}
+
+                            {% for element in json_data[key]["videos"] %}
+                            {% if count.value < 4 %}
+                            <video autoplay playsinline muted loop>
+                                <source src="{{ element }}" type="video/mp4">
+                            </video>
+                            {% set count.value = count.value + 1 %}
+                            {% endif %}    
+                            {% endfor %}
+                            
+                            {% for element in json_data[key]["images"] %}
+                            {% if count.value < 4 %}
+                            <img src="{{ element }}">
+                            {% set count.value = count.value + 1 %}
+                            {% endif %}
+                            {% endfor %}
+
+                        </a>
+                    </div>
+
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <ul class="col">
+            <li class="row">
+                <div class="name header">
+                    <ul>
+                        <li>
+                            <a href="{{ url_for('photo_archive') }}">Fotografiearchiv</a>
+                        </li>
+                        <li>
+                            <a class="translate" href="{{ url_for('photo_archive') }}">Photography Archive</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="date">ongoing</div>
+                
+                <div class="thumbgallery">
+                    <a href="{{ url_for('photo_archive') }}">
+                        
+                        <!-- value = n of elements in thumbgallery-->
+                        {% set count = namespace(value=0) %}
+                        
+                        {% for photo in photo_list %}
+                        {% if count.value < 4 %}
+                        <img src="{{ photo }}">
+                        {% set count.value = count.value + 1 %}
+                        {% endif %}
+                        {% endfor %}
+
+                    </a>
+                </div>
+            </li>
+        </ul>
+        
+        {% endblock %}
+
+    </div>
+</body>
