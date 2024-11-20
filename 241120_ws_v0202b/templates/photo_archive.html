@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Niklas Thran - Fotografiearchiv</title>
+</head>
+
+<body>
+    <div class="frame">
+    {% extends "base.html" %}
+
+        {% block content %}
+        <ul class="col">
+            <li class="row">
+                <ul class="list">
+                    <li>Fotografiearchiv seit 2013, ungeordnet.</li>
+                    <li class="translate">Photography archive since 2013, unsorted.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="col">
+            <li class="row">
+                <ul class="photogallery">
+                    {% for photo in photo_list %}
+                    <img src="{{ photo }}">
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+        {% endblock %}
+        
+    </div>
+</body>

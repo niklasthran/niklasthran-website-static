@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    {% if key_data["title"]["de"] == "" %}
+    <title>Niklas Thran – {{ key_data["title"]["en"] }}</title>
+    {% elif key_data["title"]["en"] == "" %}
+    <title>Niklas Thran – {{ key_data["title"]["de"] }}</title>
+    {% else %}
+    <title>Niklas Thran – {{ key_data["title"]["en"] }}</title>
+    {% endif %}
+</head>
+
+<body>
+    <div class="frame">
+        {% extends "base.html" %}
+
+        {% block content %}
+        <ul class="col">
+            <li class="row">
+                <ul class="list">
+                    {% if key_data["title"]["de"] == "" or key_data["title"]["en"] == "" %}
+                    <li>{{ key_data["title"]["de"] }}{{ key_data["title"]["en"] }}</li>
+                    {% else %}
+                    <li>{{ key_data["title"]["de"] }}</li>
+                    <li class="translate">{{ key_data["title"]["en"] }}</li>
+                    {% endif %}
+
+                    <li>{{ key_data["date"] }}</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <ul class="col">
+            <li class="row">
+                <ul class="gallery">
+                    {% for element in key_data["videos"] %}
+                    <video autoplay playsinline muted loop>
+                        <source src="{{ element }}" type="video/mp4">
+                    </video>
+                    {% endfor %}
+                    
+                    {% for element in key_data["images"] %}
+                    <img src="{{ element }}">
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="col">
+            <li class="row">
+                <ul class="list">
+                    <li>{{ key_data["metadata"]["de"] }}</li>
+                    <li class="translate">{{ key_data["metadata"]["en"] }}</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="col">
+            <li class="row">
+                <ul class="text">
+                    <input type="checkbox" hidden class="read-more-state" id="read-more">
+
+                    <li>{{ key_data["description"]["abstract"]["de"] | safe }}</li>
+
+                    {% if key_data["description"]["text"] %}
+                    <span class="read-more-wrap">
+                        <li class="read-more-target">
+                            {{ key_data["description"]["text"]["de"] | safe }}
+                        </li>
+                    </span>
+                    {% endif %}
+
+                    <li class="translate">{{ key_data["description"]["abstract"]["en"] | safe }}</li>
+                    
+                    {% if key_data["description"]["text"] %}
+                    <span class="read-more-wrap">
+                        <li class="translate read-more-target">
+                            {{ key_data["description"]["text"]["en"] | safe }}
+                        </li>
+                    </span>
+
+                    <br>
+                    <label for="read-more" class="read-more-trigger_closed read-more-button">
+                        ... mehr <span class="translate">more</span>
+                    </label>
+                    <label for="read-more" class="read-more-trigger_opened read-more-button">
+                        ... weniger <span class="translate">less</span>
+                    </label>
+                    {% endif %}
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="col">
+            <li class="row">
+                <ul class="list">
+                    {% if key_data["credits"] %}
+                    {% for key in key_data["credits"].keys() %}
+                    <li>{{ key_data["credits"][key]["de"] }}
+                        <span class="translate">{{ key_data["credits"][key]["en"] }}</span>:
+                        {{ key }}
+                    </li>
+                    {% endfor %}
+                    <br>
+                    {% endif %}
+
+                    {% if key_data["links"] %}
+                    {% for element in key_data["links"] %}
+                    <li><a href="{{ element }}" target="_blank">{{ element }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+
+                    {% if key_data["publishings"] %}
+                    <br>
+                    {% for element in key_data["publishings"] %}
+                    <li>{{ element  }}</li>
+                    {% endfor %}
+                    {% endif %}
+                </ul>
+            </li>
+        </ul>
+        
+        {% endblock %}
+    </div>
+</body>
