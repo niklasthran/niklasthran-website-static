@@ -15,13 +15,11 @@
                     <li class="translate">Photography archive since 2013, unsorted.</li>
                 </ul>
             </li>
-        </ul>
 
-        <ul class="col">
             <li class="row">
                 <ul class="photogallery">
                     {% for photo in photo_list %}
-                    <img src="{{ photo }}">
+                    <li><img src="{{ photo }}"></li>
                     {% endfor %}
                 </ul>
             </li>

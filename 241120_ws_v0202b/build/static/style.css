@@ -42,9 +42,7 @@ a:visited {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    column-count: 2;
-    column-gap: 2em;
-    text-align: left;
+    
     padding: 0;
     margin: 0;
 }
@@ -92,10 +90,10 @@ a:visited {
 
 .thumbgallery img,
 .thumbgallery video {
-    width: calc((100% / 4) - 0.5em);
+    width: calc((100% / 4) - var(--v-space));
     height: 3.5em;
     padding: 0;
-    margin: 0 0 0 0.5em;
+    margin: 0 0 0 var(--v-space);
     float: left;
     vertical-align: text-top;
     object-fit: cover;
@@ -104,18 +102,16 @@ a:visited {
 .text,
 .gallery {
     column-count: 2;
+    column-gap: var(--v-space);
     list-style: none;
     padding: 0;
 }
 
 .photogallery {
     column-count: 4;
+    column-gap: var(--v-space);
     list-style: none;
     padding: 0;
-}
-
-.text li {
-    break-inside: avoid-column;
 }
 
 .gallery img,
@@ -123,7 +119,11 @@ a:visited {
 .photogallery img {
     width: 100%;
     display: block;
-    padding: 0 0 var(--v-space) 0;
+}
+
+.gallery li + li,
+.photogallery li + li {
+    margin: var(--v-space) 0 0 0;
 }
 
 .list {
@@ -132,7 +132,12 @@ a:visited {
     padding: 0;
 }
 
+.text li {
+    break-inside: avoid-column;
+}
+
 .read-more-button {
+    margin: var(--v-space) 0 0 0;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -151,6 +156,10 @@ a:visited {
 .translate a {
     color: var(--translate-col) !important;
     font-style: italic;
+}
+
+.text-break {
+    display: none;
 }
 
 @media (max-width: 1250px) {
@@ -185,6 +194,13 @@ a:visited {
     }
 
     .list {
+        width: 100%;
+    }
+
+    .text-break {
+        display: block;
+        list-style: none;
+        margin: 0 0 var(--v-space) 0;
         width: 100%;
     }
 }
