@@ -20,6 +20,7 @@ a:hover,
 a:visited {
     color: var(--font-col);
     overflow-wrap: break-word;
+    text-decoration-thickness: 1px;
 }
 
 .frame {
@@ -139,6 +140,7 @@ a:visited {
 .read-more-button {
     margin: var(--v-space) 0 0 0;
     text-decoration: underline;
+    text-decoration-thickness: 1px;
     cursor: pointer;
 }
 
