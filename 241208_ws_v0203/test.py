@@ -23,4 +23,4 @@ for project in os.listdir(f"{data_location}/projects"):
         
         all_projects.update(project_data)
 
-print(all_projects['pi']['images'])
+print(all_projects['pi'])

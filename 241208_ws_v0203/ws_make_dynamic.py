@@ -3,27 +3,31 @@ import json
 import os
 data_location = "./static"
 
-# Load JSON
-json_data = json.load(open(f"{data_location}/project_data.json"))
+all_projects = {}
 
-# Generate image and video URLs
-for key in json_data.keys():
-    videos = []
-    images = []
-    for file in os.listdir(f"{data_location}/{key}"):
-        if ".mp4" in file or ".mov" in file:
-            videos.append(f"{data_location}/{key}/{file}")
-        if ".jpg" in file or ".png" in file:
-            images.append(f"{data_location}/{key}/{file}")
+for project in os.listdir(f"{data_location}/projects"):
+    if ".DS_Store" not in project:
+        project_data = {}
+        videos = []
+        images = []
+
+        for file in os.listdir(f"{data_location}/projects/{project}"):
+            if ".json" in file:
+                project_data = json.load(open(f"{data_location}/projects/{project}/{file}"))
+            if ".mp4" in file or ".mov" in file:
+                videos.append(f"{data_location}/projects/{project}/{file}")
+            if ".jpg" in file or ".png" in file:
+                images.append(f"{data_location}/projects/{project}/{file}")
         
-    json_data[key]["videos"] = videos
-    json_data[key]["images"] = images
+        project_data[project]["videos"] = videos
+        project_data[project]["images"] = images
+        
+        all_projects.update(project_data)
 
 # Sort -> date
-json_data = dict(sorted(json_data.items(), key = lambda x: x[1]["date"], reverse=True))
+all_projects = dict(sorted(all_projects.items(), key = lambda x: x[1]["date"], reverse=True))
 
-for file in os.listdir(f"{data_location}/projects"):
-    print(file)
+print(all_projects['pi'])
 
 # List all photos in photo_archive directory
 photo_data = []
@@ -37,15 +41,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html", json_data=json_data, photo_data=photo_data)
+    return render_template("index.html", all_projects=all_projects, photo_data=photo_data)
 
 @app.route("/<key>.html")
 def project(key):
 
     project_data = None
 
-    if key in json_data:
-        project_data = json_data[key]
+    if key in all_projects:
+        project_data = all_projects[key]
 
     return render_template("project.html", project_data=project_data)
 

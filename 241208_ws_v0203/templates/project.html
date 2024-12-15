@@ -66,49 +66,26 @@
 
             <li class="row">
                 <ul class="text">
-                    <input type="checkbox" hidden class="read-more-state" id="read-more">
-
                     <li>{{ project_data["description"]["abstract"]["de"] | safe }}</li>
 
                     {% if project_data["description"]["text"] %}
-                    <li class="read-more-wrap text-more">
-                        <span class="read-more-target">
-                            {{ project_data["description"]["text"]["de"] | safe }}
-                        </span>
-                    </li>
+                    <li>{{ project_data["description"]["text"]["de"] | safe }}</li>
                     {% endif %}
 
                     <li lang="en-EN">{{ project_data["description"]["abstract"]["en"] | safe }}</li>
 
                     {% if project_data["description"]["text"] %}
-                    <li class="read-more-wrap text-more">
-                        <span lang="en-EN" class="read-more-target">
-                            {{ project_data["description"]["text"]["en"] | safe }}
-                        </span>
-                    </li>
+                    <li lang="en-EN">{{ project_data["description"]["text"]["en"] | safe }}</li>
+                    {% endif %}
 
                     {% if project_data["description"]["reference"] %}
-                    <li class="read-more-wrap reference">
+                    <li>
                         {% for element in project_data["description"]["reference"] %}
-                        <span class="read-more-target">
-                            {{ element | safe }}
-                        </span>
+                        <span>{{ element | safe }}</span>
                         {% endfor %}
                     </li>
                     {% endif %}
-                    {% endif %}
                 </ul>
-
-                {% if project_data["description"]["text"] %}
-                <ul class="list">
-                    <li class="read-more-trigger_closed read-more-button">
-                        <label for="read-more" class="read-more-button">... mehr <span lang="en-EN">more</span></label>
-                    </li>
-                    <li class="read-more-trigger_opened read-more-button">
-                        <label for="read-more" class="read-more-button">... weniger <span lang="en-EN">less</span></label>
-                    </li>
-                </ul>
-                {% endif %}
             </li>
 
             {% if project_data["credits"] %}
@@ -116,7 +93,7 @@
                 <ul class="list">
                     {% for key in project_data["credits"].keys() %}
                     <li>
-                        {{ project_data["credits"][key]["de"] }} <span lang="en-EN">{{ project_data["credits"][key]["en"] }}</span>: {{ key }}
+                        {{ project_data["credits"][key]["de"] }} <span lang="en-EN">{{ project_data["credits"][key]["en"] }}:</span> {{ key }}
                     </li>
                     {% endfor %}
                 </ul>

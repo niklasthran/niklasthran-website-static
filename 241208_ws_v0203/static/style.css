@@ -140,27 +140,6 @@ a:visited {
     font-style: italic;
 }
 
-.read-more-button {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    cursor: pointer;
-    text-underline-offset: 0.15em;
-    margin: var(--v-space) 0 0 0;
-}
-
-.read-more-target,
-.read-more-trigger_opened,
-.read-more-state:checked ~ .read-more-trigger_closed,
-.read-more-state:not(:checked) ~ .reference,
-.read-more-state:not(:checked) ~ .text-more {
-    display: none;
-}
-
-.read-more-state:checked ~ .read-more-wrap .read-more-target,
-.read-more-state:checked ~ .read-more-trigger_opened {
-    display: block;
-}
-
 /*DIVIDER ELEMENTS*/
 .line {
     list-style: none;

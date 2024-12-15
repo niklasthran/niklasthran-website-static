@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title>Niklas Thran – Contact</title>
+    </head>
+
+    <body>
+        <ul class="col">
+            <li class="row">
+                <ul class="list">
+                    <li>Niklas Thran</li>
+                    <li><a href="{{ url_for('index') }}">Works</a></li>
+                    <li>Contact</li>
+                    <li><a href="{{ url_for('imprint') }}">Imprint</a></li>
+                </ul>
+            </li>
+            <li class="line"></li>
+        </ul>
+
+        <ul class="col">
+            <li class="row">
+                <ul class="list">
+                    <li><a href="mailto:hello@niklasthran.com">hello@niklasthran.com</a></li>
+                    <li>&#xBD of <a href="https://rwnt.de/" target="_blank">RWNT</a></li>
+                    <li><a href="https://www.github.com/niklasthran" target="_blank">Github</a></li>
+                    <li><a href="https://www.instagram.com/niklasthran" target="_blank">Instagram</a></li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
