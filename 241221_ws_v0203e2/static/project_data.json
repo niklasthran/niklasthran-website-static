@@ -1,0 +1,110 @@
+{
+  "pi": {
+    "title": {
+      "de": "Pi",
+      "en": ""
+    },
+    "date": "2022–07",
+    "description": {
+      "abstract": {
+        "de": "Pi ist eine kinetische Skulptur, die auf dem Rauschen von zufällig verteilten Ziffern der gleichnamigen Zahl basiert. Dieses Rauschen ist eine annehmbar unerschöpfliche Quelle, der Elemente nicht periodischer Natur entspringen. Sie versetzen die Körper in Bewegung, deren Körperformen wiederum die Quelle kommunizieren.",
+        "en": "Pi is a kinetic sculpture based on the noise of randomly distributed digits of the eponymous number. The noise appears as a seemingly inexhaustible well of non-periodic elements, setting the objects in motion. In turn, the object's shapes communicate the source."
+      },
+      "text": {
+        "de": "Zählt die Kreiszahl Pi zur Gruppe der normalen Zahlen? Eine Frage, die sich bis heute nicht endgültig beweisen lässt. Allerdings legen neuere Algorithmen diese Vermutung nahe: Alle Nachkommaziffern von Pi als auch ihre Ziffernblöcke einer bestimmten Länge treten (asymptotisch) gleich häufig auf. Diese Eigenschaft macht die Zahl zu einer Quelle zufällig verteilter Ziffern, die alle gleich häufig vorkommen.<br> Jedes der zehn Installationselemente repräsentiert eine Nachkommaziffer von Null bis Neun. Durch die scheinbar unendliche Anzahl an Ziffern wird die Drehbewegung der Elemente ausgelöst. Die Abfolge ist vorherbestimmt – jedoch ohne wiederkehrendes Muster.",
+        "en": "Does Pi belong to the numeric range of normal numbers? Yet, not entirely proven, new algorithms suggest just that. All its decimal places and number blocks of a certain length appear (asymptotic) equally frequently. This property makes Pi a source of randomly distributed digits that occur equally often.<br> Every of the ten installation objects represents a decimal place's integer, zero to nine. The seemingly infinite quantity of digits triggers the rotating movements of the objects with a predestined sequence but without any repeating patterns."
+      }
+    },
+    "metadata": {
+      "de": "MDF-Platten, Stahlrohe, Buchenholzringe, maßgefertigte Servomotoren und Software, Arduino, 450 x 45 x 175 cm",
+      "en": "MDF boards, steel tubes, beechwood loops, custom servo motors and software, Arduino, 68.9 x 117.2 x 17.7 in"
+    },
+    "credits": {
+      "Robin Woern": {
+        "de": "Konzept",
+        "en": "Concept"
+      },
+      "Niklas Thran": {
+        "de": "Entwicklung",
+        "en": "Development"
+      }
+    },
+    "links": ["https://robinwoern.com/pi"]
+  },
+
+  "circular": {
+    "title": {
+      "de": "",
+      "en": "Circular"
+    },
+    "date": "2023–12",
+    "description": {
+      "abstract": {
+        "de": "Circular ist eine ortsspezifische Installation für das Fraunhofer-Institut für Grenzflächen- und Bioverfahrenstechnik IGB. Sie verkörpert die Vielfalt der Bioökonomie – eine nachhaltige und zirkuläre Wirtschaftsform. Die Arbeit visualisiert unterschiedliche Perspektiven der Forschung. Circular befindet sich als zentrales Element im Atrium des Instituts in Stuttgart.",
+        "en": "Circular is a site-specific installation at the Fraunhofer Institute for Interfacial Engineering and Biotechnology IGB. It embodies a diverse and biobased economy (bioeconomy)—a system that strives for sustainability and circularity—by displaying different facets of scientific research in this field. As a central element, Circular is located in the institute's atrium in Stuttgart."
+      },
+      "text": {
+        "de": "Das IGB forscht an biobasierten Materialien aus nachwachsenden Rohstoffen, die sich durch eine hohe Wiederverwertbarkeit auszeichnen und damit effiziente und vielseitige Einsatzmöglichkeiten erlauben. Im Rahmen des Projekts Look@BioEconomy ermöglichte die Kooperation mit dem Fraunhofer-Institut einen direkten Austausch zwischen Kunst und Wissenschaft.<br> 16 Trägerplatten enthalten unterschiedliche Materialien, die derzeit am IGB erforscht werden. Die hängenden Objekte eröffnen einen konkreten visuellen Einblick in den aktuellen Stand der Forschung. Vertikal eingespannt und miteinander verbunden sind die Exponate mithilfe von Drahtseilen, sodass sie sich auch als kontinuierliche Bahnen weiterdenken lassen. Die Installation verweist damit auf die dynamische Entwicklung und Offenheit der Bioökonomie. Circular gibt diesem laufenden Prozess und der Arbeit der Wissenschaftler*innen am Institut eine Gestalt.<br> Die Konstruktion bildet eine ästhetische Referenz zum Institutsgebäude selbst, den Laboren und deren technischer Ausstattung. Hell reflektierendes Metall und transparentes Glas lassen die Installation leicht wirken. Die freistehende Position von Circular eröffnet verschiedene räumliche Perspektiven. Als integraler Bestandteil des Treppenhauses fungiert die Installation als Impuls für offene Wissenschaftskommunikation.<br> Besonderer Dank gilt den Wissenschaftler*innen und Mitarbeiter*innen des Fraunhofer IGB, Lisa Kern, Sabine Krieg, Elke Präg, Benham Parwizi und Maik Schalge. Die Arbeit wurde von Sophie Hundbiss, Stefan Hundbiss, David Krebs, Carsten Nicolai, Alexander Nitzke, Adrian Pfisterer, Luisa Roth und Ralf T., unterstützt.<br> Das Kunstprojekt »Look@BioEconomy« wurde vom Fraunhofer-Netzwerk »Wissenschaft, Kunst und Design« gefördert.",
+        "en": "IGB researches bio-based materials made from renewable materials rather than fossile fuels, which are characterized by a high recyclability and thus allow efficient and versatile applications.<br> As part of the project Look@BioEconomy, this cooperation with the Fraunhofer Institute enabled a head-on exchange of art and science.<br> 16 panes carry different materials that are currently being researched at the IGB. These hanging objects provide a tangible optical insight into the current state of research. They are mounted vertically,interconnected by wires, allowing them to be thought of as continuous paths. The installation thus refers to the dynamic and everdeveloping nature of the bioeconomy. Circular gives shape to this ongoing process and the work of scientists at the institute.<br> The construction aesthetically references the institute building itself, its laboratories and technical equipment. Brightly reflective metal and transparent glass make the installation appear effortless while Circular's detached position offers various spatial perspectives. As an intrinsic part of the stairwell, the installation sends impulses for open science communication.<br> Special recognition goes to the scientists and employees of Fraunhofer IGB, Lisa Kern, Sabine Krieg, Elke Präg, Benham Parwizi and Maik Schalge. The project was supported by Sophie Hundbiss, Stefan Hundbiss, David Krebs, Carsten Nicolai, Alexander Nitzke, Adrian Pfisterer, Luisa Roth and Ralf T.<br> The art project \"Look@BioEconomy\" was sponsored by the Fraunhofer network \"Science, Art and Design\"."
+      }
+    },
+    "metadata": {
+      "de": "Aluminiumprofile und -platten, Drahtseil, biobasierte Materialien zwischen ESG-Platten, 108 x 108 x 500 cm",
+      "en": "Aluminum profiles and sheets, wire cable, bio-based materials set in tempered glass sheets, 42.5 x 42.5 x 196.6 in"
+    },
+    "credits": {
+      "Fraunhofer IGB": {
+        "de": "Auftraggeber",
+        "en": "Client"
+      },
+      "Robin Woern, Niklas Thran": {
+        "de": "Konzept, Entwicklung, Gestaltung und Montage",
+        "en": "Concept, development, design and assembly"
+      },
+      "Ute Schimmelpfennig": {
+        "de": "Architektonische Beratung",
+        "en": "Architectural consultation"
+      },
+      "Technik & Design M. Maile": {
+        "de": "Statik", 
+        "en": "Statics"
+      },
+      "Felix Schäfer, ro.handmade design": {
+        "de": "Montageunterstützung",
+        "en": "Installation support"
+      },
+      "Liboh Metallwerkstatt GmbH, BE GLASS GmbH, item Industrietechnik GmbH": {
+        "de": "Fertigung",
+        "en": "Manufacturing"
+      },
+      "© Robin Woern and Niklas Thran / Fraunhofer IGB": {
+        "de": "Fotografien",
+        "en": "Photography"
+      }
+    },
+    "links": ["https://robinwoern.com/circular", "https://www.igb.fraunhofer.de/de/look-at-bioeconomy.html"]
+  },
+
+  "the_dorsal_map": {
+    "title": {
+      "de": "",
+      "en": "A Response: The Dorsal Map"
+    },
+    "date": "2024–03",
+    "description": {
+      "abstract": {
+        "de": "The Dorsal Map: Mit \"Technologie\" in Richtung Zukunft navigieren – was bedeutet das überhaupt? Ausgehend von einer Antwort auf Dr. Annika Haas'<sup>1</sup> Seminar, \"Whose Technology?\" (2023–24), und \"Dorsality\" von David Wills (2008), versucht diese Karte Teile seiner Begriffsinterpretation der \"Technologie\" darzustellen und nachzuvollziehen.",
+        "en": "The Dorsal Map: Navigating towards future goals through 'technology', and what even does that mean? Exploring further, from an initial response to Dr. Annika Haas'<sup>1</sup> seminar, 'Whose Technology?' (2023–24), and 'Dorsality' by David Wills (2008), this is a map to present and comprehend parts of his interpretation of the term 'technology'."
+      },
+      "text": {
+        "de": "Sie zeigt Beziehungen und Ausrichtungen zwischen besonders hervortretenden Wörtern des Textes und soll ihre Bedeutung dadurch sichtbar machen. Das Diagramm geht letztendlich über das Individuum hinaus und visualisiert die Anwendung von Wills' Interpretation auf zwischenmenschlicher Ebene: Ablagerungen in der Gegenwart, die, in die Vergangenheit übergehend, zu Erinnerungen und schließlich zu Archiven werden, kreisen in der Gegenwart anderer Zweibeiner und beschleunigen deren zielgerichtete Vorwärtsbewegung. So verbindet sich die eigene Gegenwart mit der Vergangenheit anderer, und anderer Gegenwart mit der eigenen Vergangenheit. Die Visualisierung soll diese miteinander verwobenen Einflüsse zeigen.",
+        "en": "It shows relations and alignments amongst imposing words of the text, so their meaning may become visible. Starting from this, the diagram even exceeds the layer of the individual and visualises the application of Wills' interpretation interpersonally: Deposits at the present that, crossing over in the past, become memories and, finally archives, will revolve in the present of other given biped, accelerating their forward movements towards their future goals. So ones present connects to others' past, and others' present ones past. The visual shall show this interwoven influences."
+      },
+      "reference": ["<sup>1</sup><a target='_blank' href='https://www.transcript-verlag.de/author/haas-annika-320008938/'>https://www.transcript-verlag.de/author/haas-annika-320008938/</a>"]
+    },
+    "metadata": {
+      "de": "Schwarz-Weiß Laserdruck auf C4 Briefumschlag, 19,7 x 19,8 cm",
+      "en": "Black and white laser print on C4 envelope, 7.8 x 7.8 in"
+    }
+  }
+}
