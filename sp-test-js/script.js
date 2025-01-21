@@ -1,19 +1,30 @@
 const dpi = window.devicePixelRatio;
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d");
+
 let width;
 let height;
 let step;
 let mouseX;
 let mouseY;
-let r = 256;
-let res = 256;
-let angle = (2.0 * Math.PI / res);
-let shift = Math.PI * 0.5;
-let stroke_offset = r / 16;
-let bar_width = r / 16;
-let bar_length = r * 0.5;
-let n_elements = 8;
+let grey_val;
+let slider;
+let diagram_h;
+let diagram_l;
+let translateX;
+let translateY;
+
+let radius = 64;
+const resolution = 256;
+let angle = (2.0 * Math.PI / resolution);
+const shift = Math.PI * 0.5;
+let stroke_offset = radius / 16;
+let bar_width = radius / 16;
+let bar_length = radius * 0.5;
+let n_elements = 16;
+
+const a = 4;
+const b = 4;
 
 document.addEventListener("mousemove", mouseMoveHandler);
 
@@ -32,7 +43,7 @@ function lin_map(x, in_min, in_max, out_min, out_max){
 
 function grey_val_px(
     grey_val,
-    r,
+    radius,
     posX,
     posY,
     stroke_offset){
@@ -49,10 +60,10 @@ function grey_val_px(
     )`;
 
     ctx.beginPath();
-        ctx.lineTo(posX - r, posY - r);
-        ctx.lineTo(posX + r, posY - r);
-        ctx.lineTo(posX + r, posY + r);
-        ctx.lineTo(posX - r, posY + r);
+        ctx.lineTo(posX - radius, posY - radius);
+        ctx.lineTo(posX + radius, posY - radius);
+        ctx.lineTo(posX + radius, posY + radius);
+        ctx.lineTo(posX - radius, posY + radius);
     ctx.closePath();
     ctx.fill();
 
@@ -62,34 +73,34 @@ function grey_val_px(
     ctx.fillStyle = "rgb(200 200 200)";
 
     ctx.beginPath();
-        ctx.lineTo(posX - r, posY - r);
-        ctx.lineTo(posX + r, posY - r);
-        ctx.lineTo(posX + r, posY + r);
-        ctx.lineTo(posX - r, posY + r);
+        ctx.lineTo(posX - radius, posY - radius);
+        ctx.lineTo(posX + radius, posY - radius);
+        ctx.lineTo(posX + radius, posY + radius);
+        ctx.lineTo(posX - radius, posY + radius);
     ctx.closePath();
     ctx.stroke();
 
     ctx.beginPath();
-        ctx.lineTo(posX + r, posY - r);
-        ctx.lineTo(posX + r * 2.25 - stroke_offset, posY - r);
+        ctx.lineTo(posX + radius, posY - radius);
+        ctx.lineTo(posX + radius + (radius * 2.0 - stroke_offset), posY - radius);
     ctx.closePath();
     ctx.stroke();
 
     ctx.beginPath();
-        ctx.lineTo(posX + r, posY + r);
-        ctx.lineTo(posX + r * 2.25 - stroke_offset, posY + r);
+        ctx.lineTo(posX + radius, posY + radius);
+        ctx.lineTo(posX + radius + (radius * 2.0 - stroke_offset), posY + radius);
     ctx.closePath();
     ctx.stroke();
 }
 
 function bloch_sphere(
-    r,
+    radius,
     angle,
     shift,
     slider,
     posX,
     posY,
-    res,
+    resolution,
     stroke_offset
 ){
     /* BLOCH SPHERE */
@@ -102,24 +113,24 @@ function bloch_sphere(
 
     // Polar ellipse
     ctx.beginPath();
-        for (let pt = 0; pt <= res; pt += 1) {
+        for (let pt = 0; pt <= resolution; pt += 1) {
             let theta = angle * pt;
             
             ctx.lineTo(
-                posX + (r * 1.00) * Math.cos(theta),
-                posY + (r * 1.00) * Math.sin(theta)
+                posX + (radius * 1.00) * Math.cos(theta),
+                posY + (radius * 1.00) * Math.sin(theta)
             );
         }
     ctx.stroke();
 
     // Azimuthal ellipse
     ctx.beginPath();
-        for (let pt = 0; pt <= res; pt += 1) {
+        for (let pt = 0; pt <= resolution; pt += 1) {
             let theta = angle * pt;
             
             ctx.lineTo(
-                posX + (r * 1.00) * Math.cos(theta),
-                posY + (r * 0.25) * Math.sin(theta)
+                posX + (radius * 1.00) * Math.cos(theta),
+                posY + (radius * 0.25) * Math.sin(theta)
             );
         }
     ctx.stroke();
@@ -128,12 +139,12 @@ function bloch_sphere(
     ctx.beginPath();
         ctx.lineTo(
             posX,
-            posY - (r * 1.00) - stroke_offset
+            posY - (radius * 1.00) - stroke_offset
         );
 
         ctx.lineTo(
             posX,
-            posY + (r * 1.00) + stroke_offset
+            posY + (radius * 1.00) + stroke_offset
         );
     ctx.stroke();
 
@@ -145,7 +156,7 @@ function bloch_sphere(
         );
         
         ctx.lineTo(
-            posX + (r * 1.00) + stroke_offset,
+            posX + (radius * 1.00) + stroke_offset,
             posY
         );
     ctx.stroke();
@@ -158,8 +169,8 @@ function bloch_sphere(
         );
 
         ctx.lineTo(
-            posX - (r * 1.00) * Math.cos(theta),
-            posY - (r * 1.00) * Math.sin(theta)
+            posX - (radius * 1.00) * Math.cos(theta),
+            posY - (radius * 1.00) * Math.sin(theta)
         );
     ctx.stroke();
 
@@ -167,12 +178,12 @@ function bloch_sphere(
     ctx.beginPath();
         ctx.lineTo(
             posX + stroke_offset,
-            posY - (r * 1.00) * Math.sin(theta)
+            posY - (radius * 1.00) * Math.sin(theta)
         );
 
         ctx.lineTo(
-            posX - (r * 1.00) * Math.cos(theta),
-            posY - (r * 1.00) * Math.sin(theta)
+            posX - (radius * 1.00) * Math.cos(theta),
+            posY - (radius * 1.00) * Math.sin(theta)
         );
     ctx.stroke();
 
@@ -180,12 +191,12 @@ function bloch_sphere(
     ctx.beginPath();
         ctx.lineTo(
             posX,
-            posY - (r * 1.00)
+            posY - (radius * 1.00)
         );
 
         ctx.lineTo(
-            posX + (r * 1.00) * Math.cos(theta),
-            posY + (r * 1.00) * Math.sin(theta)
+            posX + (radius * 1.00) * Math.cos(theta),
+            posY + (radius * 1.00) * Math.sin(theta)
         );
     ctx.stroke();
 
@@ -193,12 +204,12 @@ function bloch_sphere(
     ctx.beginPath();
         ctx.lineTo(
             posX,
-            posY + (r * 1.00)
+            posY + (radius * 1.00)
         );
 
         ctx.lineTo(
-            posX + (r * 1.00) * Math.cos(theta),
-            posY + (r * 1.00) * Math.sin(theta)
+            posX + (radius * 1.00) * Math.cos(theta),
+            posY + (radius * 1.00) * Math.sin(theta)
         );
     ctx.stroke();
 
@@ -215,8 +226,8 @@ function bloch_sphere(
         );
         
         ctx.lineTo(
-            posX + (r * 1.00) * Math.cos(theta),
-            posY + (r * 1.00) * Math.sin(theta)
+            posX + (radius * 1.00) * Math.cos(theta),
+            posY + (radius * 1.00) * Math.sin(theta)
         );
     ctx.stroke();
 
@@ -224,12 +235,12 @@ function bloch_sphere(
     ctx.beginPath();
         ctx.lineTo(
             posX,
-            posY - (r * 1.00)
+            posY - (radius * 1.00)
         );
 
         ctx.lineTo(
-            posX - (r * 1.00) * Math.cos(theta),
-            posY - (r * 1.00) * Math.sin(theta)
+            posX - (radius * 1.00) * Math.cos(theta),
+            posY - (radius * 1.00) * Math.sin(theta)
         );
     ctx.stroke();
 
@@ -237,12 +248,12 @@ function bloch_sphere(
     ctx.beginPath();
         ctx.lineTo(
             posX,
-            posY + (r * 1.00)
+            posY + (radius * 1.00)
         );
 
         ctx.lineTo(
-            posX - (r * 1.00) * Math.cos(theta),
-            posY - (r * 1.00) * Math.sin(theta)
+            posX - (radius * 1.00) * Math.cos(theta),
+            posY - (radius * 1.00) * Math.sin(theta)
         );
     ctx.stroke();
 
@@ -250,12 +261,12 @@ function bloch_sphere(
     ctx.beginPath();
         ctx.lineTo(
             posX + stroke_offset,
-            posY - (r * 1.00) * Math.sin(theta) + stroke_offset
+            posY - (radius * 1.00) * Math.sin(theta) + stroke_offset
         );
 
         ctx.lineTo(
             posX - stroke_offset,
-            posY - (r * 1.00) * Math.sin(theta) - stroke_offset
+            posY - (radius * 1.00) * Math.sin(theta) - stroke_offset
         );
     ctx.stroke();
 
@@ -265,15 +276,15 @@ function bloch_sphere(
         let theta = angle * pt - shift;
         
         ctx.lineTo(
-            posX + (r * 0.25) * Math.cos(theta),
-            posY + (r * 0.25) * Math.sin(theta)
+            posX + (radius * 0.25) * Math.cos(theta),
+            posY + (radius * 0.25) * Math.sin(theta)
         );
     }
     ctx.stroke();
 }
 
 function bernoulli_line(
-    r,
+    radius,
     angle,
     shift,
     slider,
@@ -299,12 +310,12 @@ function bernoulli_line(
     ctx.beginPath();
         ctx.lineTo(
             posX,
-            posY + (r * 1.00)
+            posY + (radius * 1.00)
         );
 
         ctx.lineTo(
             posX,
-            posY - (r * 1.00)
+            posY - (radius * 1.00)
         );
     ctx.stroke();
 
@@ -312,12 +323,12 @@ function bernoulli_line(
     ctx.beginPath();
         ctx.lineTo(
             posX + bar_length,
-            posY + (r * 1.00)
+            posY + (radius * 1.00)
         );
 
         ctx.lineTo(
             posX + bar_length,
-            posY - (r * 1.00)
+            posY - (radius * 1.00)
         );
     ctx.stroke();
 
@@ -325,12 +336,12 @@ function bernoulli_line(
     ctx.beginPath();
         ctx.lineTo(
             posX + bar_length * 0.5,
-            posY + (r * 1.00)
+            posY + (radius * 1.00)
         );
 
         ctx.lineTo(
             posX + bar_length * 0.5,
-            posY - (r * 1.00)
+            posY - (radius * 1.00)
         );
     ctx.stroke();
 
@@ -338,39 +349,39 @@ function bernoulli_line(
     // Top line
     ctx.beginPath();
         ctx.lineTo(
-            posX - (r * 1.50),
-            posY - (r * 1.00)
+            posX - (radius * 1.50),
+            posY - (radius * 1.00)
         );
 
         ctx.lineTo(
             posX + stroke_offset,
-            posY - (r * 1.00)
+            posY - (radius * 1.00)
         );
     ctx.stroke();
 
     // Bottom line
     ctx.beginPath();
         ctx.lineTo(
-            posX - (r * 1.50),
-            posY + (r * 1.00)
+            posX - (radius * 1.50),
+            posY + (radius * 1.00)
         );
 
         ctx.lineTo(
             posX + stroke_offset,
-            posY + (r * 1.00)
+            posY + (radius * 1.00)
         );
     ctx.stroke();
 
     // Bloch sphere-vector conjugate projection line onto bernoulli line
     ctx.beginPath();
         ctx.lineTo(
-            posX - (r * 1.50),
-            posY - (r * 1.00) * Math.sin(theta)
+            posX - (radius * 1.50),
+            posY - (radius * 1.00) * Math.sin(theta)
         );
 
         ctx.lineTo(
             posX,
-            posY - (r * 1.00) * Math.sin(theta)
+            posY - (radius * 1.00) * Math.sin(theta)
         );
     ctx.stroke();
 
@@ -383,12 +394,12 @@ function bernoulli_line(
     ctx.beginPath();
         ctx.lineTo(
             posX + stroke_offset,
-            posY - (r * 1.00) * Math.sin(theta) + stroke_offset
+            posY - (radius * 1.00) * Math.sin(theta) + stroke_offset
         );
 
         ctx.lineTo(
             posX - stroke_offset,
-            posY - (r * 1.00) * Math.sin(theta) - stroke_offset
+            posY - (radius * 1.00) * Math.sin(theta) - stroke_offset
         );
     ctx.stroke();
 
@@ -397,22 +408,22 @@ function bernoulli_line(
     ctx.beginPath();
         ctx.lineTo(
             posX,
-            posY - (r * 0.50) * (Math.sin(theta) + 1) + (bar_width * 0.5)
+            posY - (radius * 0.50) * (Math.sin(theta) + 1) + (bar_width * 0.5)
         );
 
         ctx.lineTo(
             posX + p_up * bar_length,
-            posY - (r * 0.50) * (Math.sin(theta) + 1) + (bar_width * 0.5)
+            posY - (radius * 0.50) * (Math.sin(theta) + 1) + (bar_width * 0.5)
         );
 
         ctx.lineTo(
             posX + p_up * bar_length,
-            posY - (r * 0.50) * (Math.sin(theta) + 1) - (bar_width * 0.5)
+            posY - (radius * 0.50) * (Math.sin(theta) + 1) - (bar_width * 0.5)
         );
 
         ctx.lineTo(
             posX,
-            posY - (r * 0.50) * (Math.sin(theta) + 1) - (bar_width * 0.5)
+            posY - (radius * 0.50) * (Math.sin(theta) + 1) - (bar_width * 0.5)
         );
     ctx.closePath();
     ctx.stroke();
@@ -422,29 +433,29 @@ function bernoulli_line(
     ctx.beginPath();
         ctx.lineTo(
             posX,
-            posY - (r * 0.50) * (Math.sin(theta) - 1) + (bar_width * 0.5)
+            posY - (radius * 0.50) * (Math.sin(theta) - 1) + (bar_width * 0.5)
         );
 
         ctx.lineTo(
             posX + p_down * bar_length,
-            posY - (r * 0.50) * (Math.sin(theta) - 1) + (bar_width * 0.5)
+            posY - (radius * 0.50) * (Math.sin(theta) - 1) + (bar_width * 0.5)
         );
 
         ctx.lineTo(
             posX + p_down * bar_length,
-            posY - (r * 0.50) * (Math.sin(theta) - 1) - (bar_width * 0.5)
+            posY - (radius * 0.50) * (Math.sin(theta) - 1) - (bar_width * 0.5)
         );
 
         ctx.lineTo(
             posX,
-            posY - (r * 0.50) * (Math.sin(theta) - 1) - (bar_width * 0.5)
+            posY - (radius * 0.50) * (Math.sin(theta) - 1) - (bar_width * 0.5)
         );
     ctx.closePath();
     ctx.fill();
 }
 
 function noise_matrix(
-    r,
+    radius,
     n_elements,
     angle,
     shift,
@@ -455,8 +466,8 @@ function noise_matrix(
     stroke_offset){
 
     /* NOISE MATRIX */
-    let patch_width = r * 2;
-    let patch_height = r * 2;
+    let patch_width = radius * 2;
+    let patch_height = radius * 2;
     let theta = angle * slider - shift;
     let p_up = Math.abs(Math.pow(Math.cos((theta + shift) / 2), 2));
     let p_down = Math.abs(Math.pow(Math.sin((theta + shift) / 2), 2));
@@ -493,8 +504,8 @@ function noise_matrix(
     /* Matrix frame */
     ctx.beginPath();
         ctx.lineTo(
-            posX - (r * 1.50) + bar_length + stroke_offset,
-            posY - (r * 1.00)
+            posX - (radius * 1.50) + bar_length + stroke_offset,
+            posY - (radius * 1.00)
         );
 
         ctx.lineTo(
@@ -505,8 +516,8 @@ function noise_matrix(
 
     ctx.beginPath();
         ctx.lineTo(
-            posX - (r * 1.50) + bar_length + stroke_offset,
-            posY + (r * 1.00)
+            posX - (radius * 1.50) + bar_length + stroke_offset,
+            posY + (radius * 1.00)
         );
 
         ctx.lineTo(
@@ -562,53 +573,65 @@ function draw() {
         mouse_y_constraint = 0.0;
     }
 
-    let grey_val = lin_map(mouse_y_constraint, 0.0, height, 255, 0);
-    let slider = lin_map(grey_val, 255, 0, 0.0, res * 0.5);
+    //let grey_val = lin_map(mouse_y_constraint, 0.0, height, 255, 0);
+    //let slider = lin_map(grey_val, 255, 0, 0.0, resolution * 0.5);
 
-    let translateX = r * 4.25;
+    diagram_l = (radius * 2.0 * a + radius * 1.0) + (radius * 3.5 * a - radius * 0.5) + (radius * 2.0 * a + radius * 1.0);
+    diagram_h = b * radius * 2.0;
 
-    noise_matrix(
-        r,
-        n_elements,
-        angle,
-        shift,
-        slider,
-        bar_length,
-        (width * 0.5) + r * 6.5 - translateX,
-        height * 0.5,
-        stroke_offset
-    );
+    translateX = (width - diagram_l) * 0.5 + radius;
+    translateY = (height - diagram_h) * 0.5 + radius;
 
-    bernoulli_line(
-        r,
-        angle,
-        shift,
-        slider,
-        bar_length,
-        bar_width,
-        (width * 0.5) + r * 5.0 - translateX,
-        height * 0.5,
-        stroke_offset
-    );
+    for (let i = 0; i < a; i++){
+        for (let j = 0; j < b; j++){
+            grey_val = lin_map(i + j, 0.0, a + b - 2, 255, 0);
+            slider = lin_map(grey_val, 255, 0, 0.0, resolution * 0.5);
 
-    bloch_sphere(
-        r,
-        angle,
-        shift,
-        slider,
-        (width * 0.5) + r * 3.5 - translateX,
-        height * 0.5,
-        res,
-        stroke_offset
-    );
+            noise_matrix(
+                radius,
+                n_elements,
+                angle,
+                shift,
+                slider,
+                bar_length,
+                (radius * 5.5) * a + (radius * 2.0) * i + (radius * 0.5) + translateX,
+                (radius * 0.0) * b + (radius * 2.0) * j + (radius * 0.0) + translateY,
+                0
+            );
 
-    grey_val_px(
-        grey_val,
-        r,
-        (width * 0.5) + r - translateX,
-        height * 0.5,
-        stroke_offset
-    );
+            bernoulli_line(
+                radius,
+                angle,
+                shift,
+                slider,
+                bar_length,
+                bar_width,
+                (radius * 2.0) * a + (radius * 3.5) * i + (radius * 2.5) + translateX,
+                (radius * 0.0) * b + (radius * 2.0) * j + (radius * 0.0) + translateY,
+                0
+            );
+            
+            bloch_sphere(
+                radius,
+                angle,
+                shift,
+                slider,
+                (radius * 2.0) * a + (radius * 3.5) * i + (radius * 1.0) + translateX,
+                (radius * 0.0) * b + (radius * 2.0) * j + (radius * 0.0) + translateY,
+                resolution,
+                0
+            );
+
+            grey_val_px(
+                grey_val,
+                radius,
+                (radius * 0.0) * a + (radius * 2.0) * i + (radius * 0.0) + translateX,
+                (radius * 0.0) * b + (radius * 2.0) * j + (radius * 0.0) + translateY,
+                0
+            );
+
+        }
+    }
 
     window.requestAnimationFrame(draw);
 }
