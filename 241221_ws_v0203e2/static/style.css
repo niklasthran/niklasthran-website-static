@@ -46,32 +46,46 @@ body {
 }
 
 .row {
-    margin: 0 0 var(--v-space)  0;
+    margin: 0 0 var(--v-space) 0;
     padding: 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
+li {
+    /*outline: 1px solid red;*/
+}
+
 /*LIST-CONTAINER ELEMENTS*/
 .list {
     list-style: none;
-    width: calc(50% - 1em);
+    width: calc(50% - var(--v-space) * 0.5);
     padding: 0;
     margin: 0;
+}
+
+.header {
+    width: 100%;
+}
+
+.header li {
+    float: left;
+}
+
+.header li:not(:first-of-type) {
+    margin: 0 0 0 4px;
 }
 
 /*MEDIA-CONTAINER ELEMENTS*/
 .thumbnails {
     flex: 5;
     order: 3;
-    
-    /*border: 1px solid red;*/
 }
 
 .thumbnails li {
     width: calc(100% / 4 - 3px);
-    height: calc(var(--v-space) * 2.2);
+    height: calc(var(--v-space) * 2.0 - 4px); /*2.2*/
     list-style: none;
     float: left;
 }
@@ -104,8 +118,6 @@ body {
 .text li {
     break-inside: avoid;
     padding: var(--v-space) 0 0 0;
-    
-    /*border: 1px solid red;*/
 }
 
 .thumbnails img,
@@ -150,30 +162,33 @@ a:visited {
 }
 
 /*TABLE ATTRIBUTES*/
+.table {
+    height: calc(var(--v-space) * 2.0);
+}
+
+.table:not(:last-of-type) {
+    margin: 0;
+}
+
 .name {
     flex: 4;
     order: 1;
     padding: 0;
     margin: 0;
     min-width: 0;
-    
-    /*border: 1px solid blue;*/
 }
 
 .name li {
-    width: calc(100% - 1em);
+    width: calc(100% - var(--v-space));
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
-    vertical-align: text-top;
     list-style: none;
 }
 
 .date {
     flex: 1;
     order: 2;
-    
-    /*border: 1px solid black;*/
 }
 
 @media (max-width: 950px) {

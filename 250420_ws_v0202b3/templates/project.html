@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
+
+        {% if project_data["title"]["de"] == "" %}
+        <title>Niklas Thran — {{ project_data["title"]["en"] }}</title>
+        {% elif project_data["title"]["en"] == "" %}
+        <title>Niklas Thran — {{ project_data["title"]["de"] }}</title>
+        {% else %}
+        <title>Niklas Thran — {{ project_data["title"]["en"] }}</title>
+        {% endif %}
+    </head>
+
+    <body>
+        <ul class="col">
+            <li class="row">
+                <ul class="list header">
+                    <li>Niklas Thran —</li>
+                    <li><a href="{{ url_for('index') }}">Works,</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact,</a></li>
+                    <li><a href="{{ url_for('imprint') }}">Imprint</a></li>
+                </ul>
+            </li>
+            <li class="line"></li>
+        </ul>
+
+        <ul class="col">
+            <li class="row">
+                <ul class="list">
+                    {% if project_data["title"]["de"] == "" or project_data["title"]["en"] == "" %}
+                    <li>{{ project_data["title"]["de"] }}{{ project_data["title"]["en"] }}</li>
+                    {% else %}
+                    <li>{{ project_data["title"]["de"] }}</li>
+                    <li lang="en-EN">{{ project_data["title"]["en"] }}</li>
+                    {% endif %}
+
+                    <li>{{ project_data["date"] }}</li>
+                </ul>
+            </li>
+
+            <li class="row">
+                <ul class="gallery">
+                    {% for element in project_data["videos"] %}
+                    <li>
+                        <video autoplay playsinline muted loop>
+                            <source src="{{ element }}" type="video/mp4">
+                        </video>
+                    </li>
+                    {% endfor %}
+
+                    {% for element in project_data["images"] %}
+                    <li><img src="{{ element }}"></li>
+                    {% endfor %}
+                </ul>
+            </li>
+
+            <li class="row">
+                <ul class="list">
+                    <li>{{ project_data["metadata"]["de"] }}</li>
+                    <li lang="en-EN">{{ project_data["metadata"]["en"] }}</li>
+                </ul>
+            </li>
+
+            <li class="row">
+                <ul class="text">
+                    <li>{{ project_data["description"]["abstract"]["de"] | safe }}</li>
+
+                    {% if project_data["description"]["text"] %}
+                    <li>{{ project_data["description"]["text"]["de"] | safe }}</li>
+                    {% endif %}
+
+                    <li lang="en-EN">{{ project_data["description"]["abstract"]["en"] | safe }}</li>
+
+                    {% if project_data["description"]["text"] %}
+                    <li lang="en-EN">{{ project_data["description"]["text"]["en"] | safe }}</li>
+                    {% endif %}
+
+                    {% if project_data["description"]["reference"] %}
+                    <li>
+                        {% for element in project_data["description"]["reference"] %}
+                        <span>{{ element | safe }}</span>
+                        {% endfor %}
+                    </li>
+                    {% endif %}
+                </ul>
+            </li>
+
+            {% if project_data["credits"] %}
+            <li class="row">
+                <ul class="list">
+                    {% for key in project_data["credits"].keys() %}
+                    <li>
+                        {{ project_data["credits"][key]["de"] }} <span lang="en-EN">{{ project_data["credits"][key]["en"] }}</span>: {{ key }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+
+            {% if project_data["links"] %}
+            <li class="row">
+                <ul class="list">
+                    {% for element in project_data["links"] %}
+                    <li><a href="{{ element }}" target="_blank">{{ element }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+
+            {% if project_data["publishings"] %}
+            <li class="row">
+                <ul class="list">
+                    {% for element in project_data["publishings"] %}
+                    <li>{{ element  }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+        </ul>
+    </body>
+</html>

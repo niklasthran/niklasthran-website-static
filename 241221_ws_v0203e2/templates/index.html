@@ -4,16 +4,16 @@
         <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
-        <title>Niklas Thran – Works</title>
+        <title>Niklas Thran — Works</title>
     </head>
 
     <body>
         <ul class="col">
             <li class="row">
-                <ul class="list">
-                    <li>Niklas Thran</li>
-                    <li>Works</li>
-                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <ul class="list header">
+                    <li>Niklas Thran —</li>
+                    <li>Index,</li>
+                    <li><a href="{{ url_for('contact') }}">Contact,</a></li>
                     <li><a href="{{ url_for('imprint') }}">Imprint</a></li>
                 </ul>
             </li>
@@ -22,7 +22,7 @@
 
         <ul class="col">
             {% for key in all_projects %}
-            <li class="row">
+            <li class="row table">
                 <ul class="list name">
                     {% if all_projects[key]["title"]["de"] == "" %}
                     <li><a href="{{ url_for('project', key=key) }}">{{ all_projects[key]["title"]["en"] }}</a></li>
@@ -69,7 +69,7 @@
             <!--<li class="line"></li>-->
             {% endfor %}
 
-            <li class="row">
+            <li class="row table">
                 <ul class="list name">
                     <li><a href="{{ url_for('photo_archive') }}">Fotografiearchiv</a></li>
                     <li lang="en-EN"><a href="{{ url_for('photo_archive') }}">Photography Archive</a></li>
@@ -89,6 +89,6 @@
                     {% endfor %}
                 </ul>
             </li>
-        </ul>        
+        </ul>
     </body>
 </html>

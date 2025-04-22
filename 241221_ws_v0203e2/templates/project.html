@@ -6,21 +6,21 @@
         <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
 
         {% if project_data["title"]["de"] == "" %}
-        <title>Niklas Thran – {{ project_data["title"]["en"] }}</title>
+        <title>Niklas Thran — {{ project_data["title"]["en"] }}</title>
         {% elif project_data["title"]["en"] == "" %}
-        <title>Niklas Thran – {{ project_data["title"]["de"] }}</title>
+        <title>Niklas Thran — {{ project_data["title"]["de"] }}</title>
         {% else %}
-        <title>Niklas Thran – {{ project_data["title"]["en"] }}</title>
+        <title>Niklas Thran — {{ project_data["title"]["en"] }}</title>
         {% endif %}
     </head>
 
     <body>
         <ul class="col">
             <li class="row">
-                <ul class="list">
-                    <li>Niklas Thran</li>
-                    <li><a href="{{ url_for('index') }}">Works</a></li>
-                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <ul class="list header">
+                    <li>Niklas Thran —</li>
+                    <li><a href="{{ url_for('index') }}">Index,</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact,</a></li>
                     <li><a href="{{ url_for('imprint') }}">Imprint</a></li>
                 </ul>
             </li>
