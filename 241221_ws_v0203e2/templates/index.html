@@ -4,7 +4,7 @@
         <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
-        <title>Niklas Thran — Works</title>
+        <title>Niklas Thran — Index</title>
     </head>
 
     <body>
@@ -21,74 +21,73 @@
         </ul>
 
         <ul class="col">
+            
+            <li class="row table">
+                <a href="{{ url_for('photo_archive') }}" class="table-link-wrap">
+                    <ul class="list name">
+                        <li>Fotografiearchiv</li>
+                        <li lang="en-EN">Photography Archive</li>
+                    </ul>
+
+                    <ul class="list date">
+                        <li>ongoing</li>
+                    </ul>
+
+                    <ul class="list thumbnails">
+                        {% set count = namespace(value=0) %}
+                        {% for photo in photo_data %}
+                        {% if count.value < 4 %}
+                        <li><img src="{{ photo }}"></li>
+                        {% set count.value = count.value + 1 %}
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </a>
+            </li>
+        
             {% for key in all_projects %}
             <li class="row table">
-                <ul class="list name">
-                    {% if all_projects[key]["title"]["de"] == "" %}
-                    <li><a href="{{ url_for('project', key=key) }}">{{ all_projects[key]["title"]["en"] }}</a></li>
-                    {% elif all_projects[key]["title"]["en"] == "" %}
-                    <li><a href="{{ url_for('project', key=key) }}">{{ all_projects[key]["title"]["de"] }}</a></li>
-                    {% else %}
-                    <li><a href="{{ url_for('project', key=key) }}">{{ all_projects[key]["title"]["de"] }}</a></li>
-                    <li lang="en-EN"><a href="{{ url_for('project', key=key) }}">{{ all_projects[key]["title"]["en"] }}</a></li>
-                    {% endif %}
-                </ul>
+                <a href="{{ url_for('project', key=key) }}" class="table-link-wrap">
+                    <ul class="list name">
+                        {% if all_projects[key]["title"]["de"] == "" %}
+                        <li>{{ all_projects[key]["title"]["en"] }}</li>
+                        {% elif all_projects[key]["title"]["en"] == "" %}
+                        <li>{{ all_projects[key]["title"]["de"] }}</li>
+                        {% else %}
+                        <li>{{ all_projects[key]["title"]["de"] }}</li>
+                        <li lang="en-EN">{{ all_projects[key]["title"]["en"] }}</li>
+                        {% endif %}
+                    </ul>
 
-                <ul class="list date">
-                    <li>{{ all_projects[key]["date"]["year"] }}</li>
-                </ul>
+                    <ul class="list date">
+                        <li>{{ all_projects[key]["date"]["year"] }}</li>
+                    </ul>
 
-                <ul class="list thumbnails">
-                    {% set count = namespace(value=0) %}
+                    <ul class="list thumbnails">
+                        {% set count = namespace(value=0) %}
 
-                    {% for element in all_projects[key]["videos"] %}
-                    {% if count.value < 4 %}
-                    <li>
-                        <a href="{{ url_for('project', key=key) }}">
+                        {% for element in all_projects[key]["videos"] %}
+                        {% if count.value < 4 %}
+                        <li>
                             <video autoplay playsinline muted loop>
                                 <source src="{{ element }}" type="video/mp4">
                             </video>
-                        </a>
-                    </li>
-                    {% set count.value = count.value + 1 %}
-                    {% endif %}    
-                    {% endfor %}
+                        </li>
+                        {% set count.value = count.value + 1 %}
+                        {% endif %}    
+                        {% endfor %}
 
-                    {% for element in all_projects[key]["images"] %}
-                    {% if count.value < 4 %}
-                    <li>
-                        <a href="{{ url_for('project', key=key) }}">
-                            <img src="{{ element }}">
-                        </a>
-                    </li>
-                    {% set count.value = count.value + 1 %}
-                    {% endif %}
-                    {% endfor %}
-                </ul>
+                        {% for element in all_projects[key]["images"] %}
+                        {% if count.value < 4 %}
+                        <li><img src="{{ element }}"></li>
+                        {% set count.value = count.value + 1 %}
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </a>
             </li>
-            <!--<li class="line"></li>-->
             {% endfor %}
 
-            <li class="row table">
-                <ul class="list name">
-                    <li><a href="{{ url_for('photo_archive') }}">Fotografiearchiv</a></li>
-                    <li lang="en-EN"><a href="{{ url_for('photo_archive') }}">Photography Archive</a></li>
-                </ul>
-
-                <ul class="list date">
-                    <li>ongoing</li>
-                </ul>
-
-                <ul class="list thumbnails">
-                    {% set count = namespace(value=0) %}
-                    {% for photo in photo_data %}
-                    {% if count.value < 4 %}
-                    <li><a href="{{ url_for('photo_archive') }}"><img src="{{ photo }}"></a></li>
-                    {% set count.value = count.value + 1 %}
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </li>
         </ul>
     </body>
 </html>

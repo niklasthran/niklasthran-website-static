@@ -21,73 +21,71 @@
         </ul>
 
         <ul class="col">
+
             {% for key in json_data %}
             <li class="row table">
-                <ul class="list name">
-                    {% if json_data[key]["title"]["de"] == "" %}
-                    <li><a href="{{ url_for('project', key=key) }}">{{ json_data[key]["title"]["en"] }}</a></li>
-                    {% elif json_data[key]["title"]["en"] == "" %}
-                    <li><a href="{{ url_for('project', key=key) }}">{{ json_data[key]["title"]["de"] }}</a></li>
-                    {% else %}
-                    <li><a href="{{ url_for('project', key=key) }}">{{ json_data[key]["title"]["de"] }}</a></li>
-                    <li lang="en-EN"><a href="{{ url_for('project', key=key) }}">{{ json_data[key]["title"]["en"] }}</a></li>
-                    {% endif %}
-                </ul>
+                <a href="{{ url_for('project', key=key) }}" class="table-link-wrap">
+                    <ul class="list name">
+                        {% if json_data[key]["title"]["de"] == "" %}
+                        <li>{{ json_data[key]["title"]["en"] }}</li>
+                        {% elif json_data[key]["title"]["en"] == "" %}
+                        <li>{{ json_data[key]["title"]["de"] }}</li>
+                        {% else %}
+                        <li>{{ json_data[key]["title"]["de"] }}</li>
+                        <li lang="en-EN">{{ json_data[key]["title"]["en"] }}</li>
+                        {% endif %}
+                    </ul>
 
-                <ul class="list date">
-                    <li>{{ json_data[key]["date"] }}</li>
-                </ul>
+                    <ul class="list date">
+                        <li>{{ json_data[key]["date"] }}</li>
+                    </ul>
 
-                <ul class="list thumbnails">
-                    {% set count = namespace(value=0) %}
+                    <ul class="list thumbnails">
+                        {% set count = namespace(value=0) %}
 
-                    {% for element in json_data[key]["videos"] %}
-                    {% if count.value < 4 %}
-                    <li>
-                        <a href="{{ url_for('project', key=key) }}">
+                        {% for element in json_data[key]["videos"] %}
+                        {% if count.value < 4 %}
+                        <li>
                             <video autoplay playsinline muted loop>
                                 <source src="{{ element }}" type="video/mp4">
                             </video>
-                        </a>
-                    </li>
-                    {% set count.value = count.value + 1 %}
-                    {% endif %}    
-                    {% endfor %}
+                        </li>
+                        {% set count.value = count.value + 1 %}
+                        {% endif %}    
+                        {% endfor %}
 
-                    {% for element in json_data[key]["images"] %}
-                    {% if count.value < 4 %}
-                    <li>
-                        <a href="{{ url_for('project', key=key) }}">
-                            <img src="{{ element }}">
-                        </a>
-                    </li>
-                    {% set count.value = count.value + 1 %}
-                    {% endif %}
-                    {% endfor %}
-                </ul>
+                        {% for element in json_data[key]["images"] %}
+                        {% if count.value < 4 %}
+                        <li><img src="{{ element }}"></li>
+                        {% set count.value = count.value + 1 %}
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </a>
             </li>
-            <!--<li class="line"></li>-->
             {% endfor %}
 
             <li class="row table">
-                <ul class="list name">
-                    <li><a href="{{ url_for('photo_archive') }}">Fotografiearchiv</a></li>
-                    <li lang="en-EN"><a href="{{ url_for('photo_archive') }}">Photography Archive</a></li>
-                </ul>
+                <a href="{{ url_for('photo_archive') }}" class="table-link-wrap">
+                    <ul class="list name">
+                        <li>Fotografiearchiv</li>
+                        <li lang="en-EN">Photography Archive</li>
+                    </ul>
 
-                <ul class="list date">
-                    <li>ongoing</li>
-                </ul>
+                    <ul class="list date">
+                        <li>ongoing</li>
+                    </ul>
 
-                <ul class="list thumbnails">
-                    {% set count = namespace(value=0) %}
-                    {% for photo in photo_data %}
-                    {% if count.value < 4 %}
-                    <li><a href="{{ url_for('photo_archive') }}"><img src="{{ photo }}"></a></li>
-                    {% set count.value = count.value + 1 %}
-                    {% endif %}
-                    {% endfor %}
-                </ul>
+                    <ul class="list thumbnails">
+                        {% set count = namespace(value=0) %}
+                        {% for photo in photo_data %}
+                        {% if count.value < 4 %}
+                        <li><img src="{{ photo }}"></li>
+                        {% set count.value = count.value + 1 %}
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </a>
             </li>
         </ul>        
     </body>
