@@ -4,7 +4,7 @@ import os
 data_location = "./static"
 
 # Load JSON
-json_data = json.load(open(f"{data_location}/project_data.json"))
+json_data = json.load(open(f"{data_location}/project-data.json"))
 
 # Generate image and video URLs
 all_files = []
@@ -27,9 +27,9 @@ json_data = dict(sorted(json_data.items(), key = lambda x: x[1]["date"], reverse
 
 # List all photos in photo_archive directory
 photo_data = []
-for file in os.listdir(f"{data_location}/photo_archive"):
+for file in os.listdir(f"{data_location}/photo-archive"):
     if ".jpg" in file or ".png" in file:
-        photo_data.append(f"{data_location}/photo_archive/{file}")
+        photo_data.append(f"{data_location}/photo-archive/{file}")
         
 photo_data.sort(reverse=True)
 
@@ -49,9 +49,9 @@ def project(key):
 
     return render_template("project.html", project_data=project_data)
 
-@app.route("/photo_archive.html")
+@app.route("/photo-archive.html")
 def photo_archive():
-    return render_template("photo_archive.html", photo_data=photo_data)
+    return render_template("photo-archive.html", photo_data=photo_data)
 
 @app.route("/contact.html")
 def contact():
