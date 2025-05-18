@@ -365,5 +365,24 @@
         "en": "Digital photography, varying dimensions"
     },
     "links": ["https://max.valentinhansen.live/", "https://www.valentinhansen.eu/index.html", "https://lukasesser.co/", "https://orlandohelferrabaca.xyz/"]
+  },
+
+  "artwork-portrait-dual": {
+    "title": {
+    "de": "Kunstwerk Portrait Dual",
+    "en": "Artwork Portrait Dual"
+    },
+    "date": "2023–10",
+    "description": {
+        "abstract": {
+            "de": "Auftragsfotodokumentation von Dual von Robin Woern, aufgenommen in der Hochschule für Bildende Künste Dresden.",
+            "en": "Commissioned photography documentation of Dual by Robin Woern, taken at Dresden University of Fine Arts."
+        }
+    },
+    "metadata": {
+        "de": "Digitale Fotografien, unterschiedliche Größen",
+        "en": "Digital photography, varying dimensions"
+    },
+    "links": ["https://robinwoern.com/dual"]
   }
 }
