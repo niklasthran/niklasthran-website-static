@@ -100,4 +100,3 @@ if ($request !== '') {
 /* assemble target url */
 $targetUrl = $appURL . '/wf/' . $domainUuid . $requestPath . (empty($queryParams) ? '' : '?' . http_build_query($queryParams));
 header('Location: ' . $targetUrl, true, 301);
-
