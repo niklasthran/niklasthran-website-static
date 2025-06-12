@@ -22,9 +22,8 @@ let stroke_offset = radius / 16;
 let bar_width = radius / 16;
 let bar_length = radius * 0.5;
 let n_elements = 16;
-
-const a = 4;
-const b = 4;
+let a;
+let b;
 
 document.addEventListener("mousemove", mouseMoveHandler);
 
@@ -32,6 +31,18 @@ function mouseMoveHandler(event) {
     mouseX = event.clientX * window.devicePixelRatio;
     mouseY = event.clientY * window.devicePixelRatio;
 }
+
+let counter = 0;
+document.addEventListener("click", (event) => {
+    
+    counter += 1;
+    
+    if (counter > 3) {
+        counter = 0;
+    }
+});
+
+
 
 function lin_map(x, in_min, in_max, out_min, out_max){
     if (in_min == in_max){
@@ -582,10 +593,36 @@ function draw() {
     translateX = (width - diagram_l) * 0.5 + radius;
     translateY = (height - diagram_h) * 0.5 + radius;
 
+    if (counter < 3) {
+        a = 4;
+        b = 4;
+    }
+    if (counter == 3) {
+        a = 1;
+        b = 1;
+    }
+
     for (let i = 0; i < a; i++){
         for (let j = 0; j < b; j++){
-            grey_val = lin_map(i + j, 0.0, a + b - 2, 255, 0);
-            slider = lin_map(grey_val, 255, 0, 0.0, resolution * 0.5);
+            if (counter == 0) {
+                grey_val = lin_map(i + j, 0.0, a + b - 2, 255, 0);
+                slider = lin_map(grey_val, 255, 0, 0.0, resolution * 0.5);
+            }
+
+            if (counter == 1) {
+                grey_val = lin_map(i, 0.0, a, 255, 0);
+                slider = lin_map(grey_val, 255, 0, 0.0, resolution * 0.5);
+            }
+
+            if (counter == 2) {
+                grey_val = lin_map(j, 0.0, b, 255, 0);
+                slider = lin_map(grey_val, 255, 0, 0.0, resolution * 0.5);
+            }
+
+            if (counter == 3) {
+                grey_val = lin_map(mouse_y_constraint, 0.0, height, 255, 0);
+                slider = lin_map(grey_val, 255, 0, 0.0, resolution * 0.5);
+            }
 
             noise_matrix(
                 radius,

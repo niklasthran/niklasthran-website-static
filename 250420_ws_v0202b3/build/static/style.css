@@ -1,0 +1,324 @@
+/*================================
+INDEX
+* GLOBAL VARIABLES
+* BASIS ELEMENTS
+* PARENT ELEMENTS
+* LIST-CONTAINER ELEMENTS
+* MEDIA-CONTAINER ELEMENTS
+* DIVIDER ELEMENTS
+* TABLE ATTRIBUTES
+================================*/
+
+/*GLOBAL VARIABLES*/
+:root {
+    --font-col: #000000;
+    --translate-col: #7F7F7F;
+    --bg-col: #F2F3F4;
+    --v-space: 1.25em;
+    --f-size: 15px;
+}
+
+@import url("https://use.typekit.net/lkg6vkl.css");
+
+/*BASIS ELEMENTS*/
+html {
+    background-color: var(--bg-col);
+}
+
+body {
+    overflow-y: scroll;
+    margin: var(--v-space) auto var(--v-space) auto;
+    width: calc(950px - var(--v-space) * 2);
+    /*font-family: Arial;*/
+    font-family: "neue-haas-unica", sans-serif;
+    font-size: var(--f-size);
+    color: var(--font-col);
+    line-height: var(--v-space);
+}
+
+/*PARENT ELEMENTS*/
+.col {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    margin: 0 0 var(--v-space) 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*LIST-CONTAINER ELEMENTS*/
+.list {
+    list-style: none;
+    width: calc(50% - var(--v-space) * 0.5);
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+}
+
+.header li {
+    float: left;
+}
+
+.header li:not(:first-of-type) {
+    margin: 0 0 0 4px;
+}
+
+/*MEDIA-CONTAINER ELEMENTS*/
+.thumbnails {
+    flex: 5;
+    order: 3;
+    height: 100%;
+}
+
+.thumbnails li {
+    width: calc(100% / 4 - 3px);
+    height: calc(100% - 4px);
+    list-style: none;
+    float: left;
+}
+
+.thumbnails li:not(:first-of-type) {
+    margin: 0 0 0 4px;
+}
+
+.gallery,
+.text {
+    column-count: 2;
+    column-gap: var(--v-space);
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: calc(var(--v-space) * -1) 0 0 0;
+}
+
+.photogallery {
+    column-count: 4;
+    column-gap: var(--v-space);
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: calc(var(--v-space) * -1) 0 0 0;
+}
+
+.gallery li,
+.photogallery li,
+.text li {
+    break-inside: avoid;
+    padding: var(--v-space) 0 0 0;
+}
+
+.thumbnails img,
+.thumbnails video,
+.gallery img,
+.gallery video,
+.photogallery img {
+    width: 100%;
+    height: 100%;
+    vertical-align: text-top;
+    object-fit: cover;
+}
+
+sup {
+    vertical-align: top;
+    position: relative;
+    top: -0.2em;
+}
+
+a:link,
+a:active,
+a:hover,
+a:visited {
+    color: var(--font-col);
+    overflow-wrap: break-word;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+}
+
+*:lang(en-EN) {
+    color: var(--translate-col) !important;
+    font-style: italic;
+}
+
+/*DIVIDER ELEMENTS*/
+/*
+.line {
+    margin: 0 0 var(--v-space) 0;
+    width: 100%;
+    list-style: none;
+    border-bottom: 1px solid var(--font-col);
+}
+*/
+.line {
+    height: var(--v-space);
+    width: 100%;
+    list-style: none;
+    border-top: 1px solid var(--font-col);
+}
+
+/*TABLE ATTRIBUTES*/
+/*Debug*/
+/*
+li {
+    outline: 1px solid red;
+}
+*/
+
+/* Controlls height of table row */
+.table {
+    height: calc(var(--v-space) * 2.5);
+}
+
+/* Height of gap between table rows */
+.table:not(:last-of-type) {
+    margin: 0;
+}
+
+.table:link .name li,
+.table:visited .name li {
+    text-decoration: none;
+}
+  
+.table:hover .name li,
+.table:active .name li {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+    color: var(--font-col);
+}
+
+/* Element within class get ignored, works as a invisible wrapper */
+.table-link-wrap {
+    display: contents;
+}
+
+.name {
+    flex: 4;
+    order: 1;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    
+}
+
+.name li {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    list-style: none;
+    padding: 0 var(--v-space) 0 0;
+}
+
+.date {
+    flex: 1;
+    order: 2;
+}
+
+@media (max-width: 950px) {
+    /*GLOBAL VARIABLES*/
+    /*BASIS ELEMENTS*/
+    body {
+        width: calc(100vw - var(--v-space) * 2);
+    }
+
+    /*PARENT ELEMENTS*/
+    /*LIST-CONTAINER ELEMENTS*/
+    /*MEDIA-CONTAINER ELEMENTS*/
+    .photogallery {
+        column-count: 2;
+    }
+
+    /*DIVIDER ELEMENTS*/
+    /*TABLE ATTRIBUTES*/
+}
+
+@media (max-width: 700px) {
+    /*GLOBAL VARIABLES*/
+    /*BASIS ELEMENTS*/
+    /*PARENT ELEMENTS*/
+    .col {
+        column-count: 1;
+    }
+
+    /*LIST-CONTAINER ELEMENTS*/
+    .list {
+        width: 100%;
+    }
+
+    /*MEDIA-CONTAINER ELEMENTS*/
+    .thumbnails {
+        display: none;
+    }
+
+    .text,
+    .gallery,
+    .photogallery {
+        column-count: 1;
+    }
+
+    /*DIVIDER ELEMENTS*/
+    /*TABLE ATTRIBUTES*/
+    .date {
+        text-align: right;
+    }
+}
+
+@media only screen
+    and (max-device-width: 480px) {
+    /*GLOBAL VARIABLES*/
+    /*BASIS ELEMENTS*/
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        width: calc(100vw - var(--v-space) * 2);
+        margin: var(--v-space) auto calc(var(--v-space) * 2) auto;
+    }
+
+    /*PARENT ELEMENTS*/
+    /*LIST-CONTAINER ELEMENTS*/
+    /*MEDIA-CONTAINER ELEMENTS*/
+    /*DIVIDER ELEMENTS*/
+    /*TABLE ATTRIBUTES*/
+}
+
+@media only screen
+    and (max-device-width: 480px)
+    and (orientation: landscape) {
+    /*GLOBAL VARIABLES*/
+    /*BASIS ELEMENTS*/
+    body {
+        width: 100vw;
+        margin: var(--v-space) 0 var(--v-space) 0;
+    }
+
+    /*PARENT ELEMENTS*/
+    /*LIST-CONTAINER ELEMENTS*/
+    /*MEDIA-CONTAINER ELEMENTS*/
+    /*DIVIDER ELEMENTS*/
+    /*TABLE ATTRIBUTES*/
+}
+
+@media (max-width: 270px) {
+    /*GLOBAL VARIABLES*/
+    /*BASIS ELEMENTS*/
+    body {
+        display: none;
+    }
+
+    /*PARENT ELEMENTS*/
+    /*LIST-CONTAINER ELEMENTS*/
+    /*MEDIA-CONTAINER ELEMENTS*/
+    /*DIVIDER ELEMENTS*/
+    /*TABLE ATTRIBUTES*/
+}

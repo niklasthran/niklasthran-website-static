@@ -356,15 +356,15 @@
     "date": "2025–04",
     "description": {
         "abstract": {
-          "de": "Auftragsfotodokumentation von MAX von Valentin Hansen, mit Fokus auf die Gestaltungs- und Konstuktionsarbeit von Lukas Esser und Orlando Helfer Rabaça.",
-          "en": "Commissioned photography documentation of MAX by Valentin Hansen, focused on the design and engineering work by Lukas Esser and Orlando Helfer Rabaça."
+          "de": "Auftragsfotodokumentation einer Gestaltungs- und Konstuktionsarbeit von Lukas Esser und Orlando Helfer Rabaça für MAX von Valentin Hansen.",
+          "en": "Commissioned photography documentation of design and engineering work by Lukas Esser and Orlando Helfer Rabaça for MAX by Valentin Hansen."
         }
     },
     "metadata": {
         "de": "Digitale Fotografien, unterschiedliche Größen",
         "en": "Digital photography, varying dimensions"
     },
-    "links": ["https://max.valentinhansen.live/", "https://www.valentinhansen.eu/index.html", "https://lukasesser.co/", "https://orlandohelferrabaca.xyz/"]
+    "links": ["https://lukasesser.co/", "https://orlandohelferrabaca.xyz/", "https://www.valentinhansen.eu/index.html"]
   },
 
   "artwork-portrait-dual": {
