@@ -26,15 +26,18 @@ let a;
 let b;
 
 document.addEventListener("mousemove", mouseMoveHandler);
+document.addEventListener("touchmove", mouseMoveHandler);
 
 function mouseMoveHandler(event) {
     mouseX = event.clientX * window.devicePixelRatio;
     mouseY = event.clientY * window.devicePixelRatio;
+    mouseX = event.touches[0].clientX * window.devicePixelRatio;
+    mouseY = event.touches[0].clientY * window.devicePixelRatio;
 }
+
 
 let counter = 0;
 document.addEventListener("click", (event) => {
-    
     counter += 1;
     
     if (counter > 3) {
@@ -596,10 +599,18 @@ function draw() {
     if (counter < 3) {
         a = 4;
         b = 4;
+        radius = 64;
+        stroke_offset = radius / 16;
+        bar_width = radius / 16;
+        bar_length = radius * 0.5;
     }
     if (counter == 3) {
         a = 1;
         b = 1;
+        radius = 100;
+        stroke_offset = radius / 16;
+        bar_width = radius / 16;
+        bar_length = radius * 0.5;
     }
 
     for (let i = 0; i < a; i++){
