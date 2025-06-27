@@ -384,5 +384,50 @@
         "en": "Digital photography, varying dimensions"
     },
     "links": ["https://robinwoern.com/dual"]
+  },
+
+  "artwork-portrait-illumeri": {
+    "title": {
+    "de": "Kunstwerk Portrait ILLUMERI",
+    "en": "Artwork Portrait ILLUMERI"
+    },
+    "date": "2025–06",
+    "description": {
+        "abstract": {
+            "de": "Auftragskunstportraits für ILLUMERI von Magdalena Steinbauer, Niklas Melcher und Robin Woern, aufgenommen bei TONALi SAAL in Hamburg (DE).",
+            "en": "Commissioned artwork portraits for ILLUMERI by Magdalena Steinbauer, Niklas Melcher and Robin Woern, captured at TONALi SAAL in Hamburg, DE."
+        }
+    },
+    "metadata": {
+        "de": "Digitale Fotografien, unterschiedliche Größen",
+        "en": "Digital photography, varying dimensions"
+    },
+    "credits": {
+        "Magdalena Steinbauer": {
+            "de": "Konzept, Projektleitung und Oboe",
+            "en": "Concept, Project Lead and Oboe"
+        },
+        "Niklas Melcher": {
+            "de": "Komponist",
+            "en": "Composer"
+        },
+        "Robin Woern": {
+            "de": "Visuelles Konzept und Künstlerische Leitung",
+            "en": "Visual concept and Art Direction"
+        },
+        "Lukas Esser": {
+            "de": "Technische Konzeption",
+            "en": "Engineering"
+        },
+        "Robert Schnüll": {
+            "de": "Produktdesign",
+            "en": "Product design"
+        },
+        "Luisa Gabrisch": {
+            "de": "Harfe",
+            "en": "Harp"
+        }
+    },
+    "links": ["https://www.tonali.de/profile/magdalena-steinbauer/", "https://robinwoern.com/", "https://sonority-arts.com/", "https://lukasesser.co/", "https://rfws.de/", "https://www.luisagabrisch.com/"]
   }
 }
