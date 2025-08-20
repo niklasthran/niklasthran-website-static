@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel= "stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title>Niklas Thran - Fotografiearchiv</title>
+    </head>
+
+    <body>
+        <ul class="col temp">
+            <li class="row">
+                <ul class="list header">
+                    <li>Niklas Thran —</li>
+                    <li><a href="{{ url_for('index') }}">Index,</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact,</a></li>
+                    <li><a href="{{ url_for('imprint') }}">Imprint</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="col">
+            <li class="row">
+                <ul class="list">
+                    <li>Fotografiearchiv seit 2013, ungeordnet.</li>
+                    <li lang="en-EN">Photography archive since 2013, unsorted.</li>
+                </ul>
+            </li>
+
+            <li class="row">
+                <ul class="photogallery">
+                    {% for photo in photo_data %}
+                    <li><img src="{{ photo }}"></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>
