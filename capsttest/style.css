@@ -6,17 +6,19 @@ body {
 }
 
 #container {
-	width: 50%;
-	height: 50%;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
 
+	
 	position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-
+	
 	margin: auto;
 }
+
 
 canvas {
 	border-radius: 10px;

@@ -83,6 +83,24 @@ camera.position.set(70, 45, 100);
 camera.lookAt(0, 0, 0);
 
 /////////
+const renderer = new THREE.WebGLRenderer(
+	{
+		antialias: true
+	}
+);
+
+renderer.setSize(
+	container.clientWidth,
+	container.clientHeight
+);
+
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.render(scene, camera);
+
+container.appendChild(renderer.domElement);
+/////////
+
+/////////
 const gsize = 100;
 const divisions = 10;
 const gridHelper = new THREE.GridHelper( gsize, divisions );
@@ -90,18 +108,12 @@ const gridHelper = new THREE.GridHelper( gsize, divisions );
 
 const axesHelper = new THREE.AxesHelper(50);
 //scene.add(axesHelper);
-
-//const controls = new OrbitControls( camera, renderer.domElement );
-//controls.update();
+/*
+const controls = new OrbitControls( camera, renderer.domElement );
+controls.update();
+controls.enableDamping = true;
+*/
 /////////
-
-const renderer = new THREE.WebGLRenderer(
-	{
-		antialias: true
-	}
-);
-renderer.setSize(container.clientWidth, container.clientHeight);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 function onWindowResize() {
 	const newAspect = container.clientWidth / container.clientHeight;
@@ -116,9 +128,6 @@ function onWindowResize() {
 	renderer.render(scene, camera);
 }
 
-renderer.render(scene, camera);
-container.appendChild(renderer.domElement);
-
 window.addEventListener("resize", onWindowResize);
 
 /*
@@ -129,7 +138,7 @@ function render(time) {
 	//cuboid.rotation.y = time;
 
 	renderer.render(scene, camera);
-	//controls.update();
+	controls.update();
 
 	requestAnimationFrame(render);
 }
